@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Main Page</title>
+    <script src="https://kit.fontawesome.com/b53c8c5019.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container container__header">
+            <div class="header__header-top">
+                <div class="header__header-left">
+                    <img src="../src/images/mosmetro.svg" alt="mosmetro-logo" class="header__header-left_img">
+                    <h2 class="header__header-left_title">Личный кабинет пассажира</h2>
+                </div>
+                <div class="header__header-middle">
+                    <div class="header__header-middle__contact-info">
+                        <p class="contact-info__number">+7 495 539-54-54</p>
+                        <p class="contact-info__provider"><span class="contact-info__provider_num">3210 </span>(Билайн, МТС, Мегафон, Tele2)</p>
+                        <a href="#" class="contact-info__link">Контакт-центр «Московский транспорт»</a>
+                    </div>
+                </div>
+                <div class="header__header-right">
+                    <div class="header__header-right__buttons">
+                        <button class="header__header-right__user-img"></button> <!-- Кнопка используется для того, чтобы при нажатии появлялось контекстное меню -->
+                        <a href="#" class="header__header-right__user-number">+7 935 435 34 43</a>
+                        <a href="#" class="header__header-right__user-name">Иванов Иван Иванович</a>
+                        <button class="header__header-right__log-out">Выйти</button>
+                    </div>
+                    <button class="fas fa-bars header__header-right__icon"></button>
+                </div>
+            </div>
+            <button class="header__header-button">
+                <i class="fas fa-angle-left angle"></i>
+                <p class="header__header-button_text">Вернуться назад</p>
+            </button>
+        </div>
+    </header>
+    <main class="main__history">
+        <div class="container">
+            <h2 class="main__history_h2">История проездов</h2>
+            <input class="main__history__filter" type="text">
+            <div class="main__history__days" id="history__days">
+                <div class="main__history__days__day" id="history__day">
+                    <p class="main__history__days__day_title">Сегодня</p>
+                    <div class="main__history__carts">
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__history__days__day" id="history__day">
+                    <p class="main__history__days__day_title">Сегодня</p>
+                    <div class="main__history__carts">
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                        <div class="main__history__cart">
+                            <div class="main__history__cart_station">
+                                <span class="main__history__cart_title">Станция метро Саларьево</span>
+                                <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <p class="main__history__cart_date">16:03, 06.04.2019</p>
+                            <p class="main__history__cart_cart-name">Моя тройка</p>
+                            <p class="main__history__cart_cart-number">1234 567 890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

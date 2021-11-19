@@ -1,0 +1,310 @@
+$colorFontSite: #D62828
+$colorFontLightgray: #777777
+$colorBackground: #F5F5FE
+
+@mixin fontParagraph
+  font-size: 14px
+  line-height: 20px
+@mixin fontBold
+  font-size: 16px
+  line-height: 24px
+
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Lato', sans-serif
+
+
+a
+  text-decoration: none
+
+.angle
+    color: $colorFontSite
+    font-size: 16px
+
+
+.container
+  margin: 0 auto
+  padding: 0 28px
+  &__header
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+.header
+  height: 132px
+  margin: 24px 0 32px 0
+  &__header-top
+    height: 56px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__header-left
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &_img
+      height: 56px
+    &_title
+      display: none
+  &__header-middle
+    display: none
+  &__header-right
+    &__buttons
+      display: none
+    &__icon
+      border: none
+      background: none
+      width: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $colorFontSite
+      font-size: 30px //подогнать размер
+      &:active // убрать при перекидывании на React
+        background-color: #777777
+
+  &__header-button
+    width: 155px
+    height: 44px
+    background: rgba(214, 40, 40, 0.16)
+    border-radius: 4px
+    border: none
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &_text
+      font-weight: 700
+      color: $colorFontSite
+
+
+.main__history
+    &_h2
+      margin-bottom: 24px
+    &__filter
+      height: 48px
+      width: 100%
+      margin-bottom: 24px
+    &__days
+      margin-bottom: 24px
+      &__day
+        width: 100%
+    &__days__day
+      margin-bottom: 24px
+    &__carts
+      width: 100%
+    &__cart:not(:last-child)
+      margin-bottom: 16px
+
+.main__history__carts
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+.main__history__cart
+  max-width: 534px
+  height: 132px
+  padding: 16px
+  background-color: $colorBackground
+  border-radius: 4px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+  &_station
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &_title
+    @include fontBold
+    font-weight: 700
+  &_price
+    @include fontBold
+    color: $colorFontSite
+    font-weight: 800
+  &_date
+    @include fontParagraph
+  &_cart-name
+    @include fontParagraph
+    color: $colorFontSite
+    font-weight: 700
+  &_cart-number
+    @include fontParagraph
+
+.main__history_h2
+  font-size: 28px
+  line-height: 42px
+.main__history__days
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  margin-bottom: 24px
+  &__day
+    max-width: 543px
+    &_title
+      @include fontBold
+      color: $colorFontLightgray
+      font-weight: 600
+      margin-bottom: 8px
+
+
+@media screen and (min-width: 640px)
+  .container
+    padding: 0 48px
+  .header
+    height: 132px
+    &__header-left
+      width: 100%
+      max-width: 303px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &_title
+        display: flex
+        max-width: 160px
+        font-size: 18px
+        line-height: 28px
+    &__header-right__icon
+      color: $colorFontSite
+      font-size: 30px //подогнать размер
+      &:active // убрать при перекидывании на React
+          background-color: #777777
+
+
+@media screen and (min-width: 880px)
+  .container
+    padding: 0 72px
+
+  .header
+    margin-top: 32px
+    height: 156px
+    &__top
+      height: 64px
+    &__header-right
+      &__buttons
+        max-width: 118px
+        display: flex
+        justify-content: space-between
+        align-items: center
+      &__user-img
+        background-image: url(../../src/images/user-img.svg)
+        background-position: center
+        background-repeat: no-repeat
+        width: 48px
+        height: 48px
+        border: none
+        border-radius: 50%
+      &__user-number
+        display: none
+      &__user-name
+        display: none
+      &__log-out
+        margin-left: 8px
+        @include fontBold
+        color: $colorFontSite
+        background: none
+        border: none
+        border-left: 1px solid $colorFontSite
+        padding-left: 8px
+        font-weight: 600
+      &__icon
+        display: none
+    &__header-middle
+      //max-width: 197px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+    &__contact-info
+      height: 64px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+
+
+  .contact-info
+    &__number
+      @include fontBold
+      color: $colorFontSite
+      font-weight: 800
+    &__provider
+      font-size: 11px
+      line-height: 18px
+      color: $colorFontLightgray
+      &_num
+        font-size: 12px
+        color: $colorFontSite
+        font-weight: 600
+    &__link
+      font-size: 12px
+      line-height: 18px
+      color: $colorFontSite
+      &:hover
+        text-decoration: $colorFontSite
+
+
+@media screen and (min-width: 1280px)
+  .container
+    padding: 0 176px
+
+  .header
+    margin: 40px 0 48px 0
+    height: 180px
+    &__header-top
+      height: 72px
+    &__header-right
+      &__buttons
+        max-width: 258px
+      &__user-img
+        margin-right: 16px
+      &__user-number
+        display: block
+        color: #212121
+        @include fontBold
+        font-weight: 600
+        &:hover
+          color: $colorFontSite
+
+
+@media screen and (min-width: 1920px)
+  .container
+    max-width: 1920px
+    padding: 0 340px
+  .header
+    height: 222px
+    &__header-top
+      height: 81.34px
+    &__header-right
+      &__buttons
+        max-width: 350px
+      &__user-img
+        background-image: url(../../src/images/user-avatar.svg)
+      &__user-number
+        display: none
+      &__user-name
+        display: block
+        color: #212121
+        @include fontBold
+        font-weight: 600
+        &:hover
+          color: $colorFontSite
+      &__log-out
+        margin-left: 24px
+        padding-left: 24px
+
+
+
+
+
+
+
