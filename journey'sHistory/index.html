@@ -48,8 +48,11 @@
             </header>
             <main class="main__history">
                 <div class="container">
-                    <h2 class="main__history_h2">История проездов</h2>
-                    <input class="main__history__filter" type="text">
+                    <h2 class="main__history_title">История проездов</h2>
+                    <button class="main__history__filter-button" type="text">
+                        <p class="main__history__filter-button_p">Фильтр</p>
+                        <i class="fas fa-angle-down angle"></i> <!-- С помощью JS будет меняться иконка -->
+                    </button>
                     <div class="main__history__days" id="history__days">
                         <div class="main__history__days__day" id="history__day">
                             <p class="main__history__days__day_title">Сегодня</p>
@@ -123,9 +126,8 @@
             <div class="container container__footer">
                 <div class="footer__legal-information">
                     <p class="footer__legal-information_copyright">ГУП «Московский метрополитен» 1935 — 2019 ©</p>
-<!--                    <p class="footer__copyright_p">1935 — 2019 ©</p>-->
                     <h4 class="footer__legal-information_title">Правовая информация</h4>
-                    <p class="footer__legal-information_text">Посещая сайт <span><a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a></span> Вы даете согласие на обработку файлов cookie, сбор которых осуществляется ГУП «Московский метрополитен» на условиях <span><a class="footer__legal-information_text_link" href="#">Политики обработки файлов cookie</a></span>. Метрополитен также может использовать указанные данные для их последующей обработки системами Яндекс.Метрика и др., которая осуществляется с целью функционирования сайта <span><a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a></span>.</p>
+                    <p class="footer__legal-information_text">Посещая сайт <a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a> Вы даете согласие на обработку файлов cookie, сбор которых осуществляется ГУП «Московский метрополитен» на условиях <a class="footer__legal-information_text_link" href="#">Политики обработки файлов cookie</a>. Метрополитен также может использовать указанные данные для их последующей обработки системами Яндекс.Метрика и др., которая осуществляется с целью функционирования сайта <a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a>.</p>
                 </div>
                 <div class="footer__departments">
                     <div class="footer__departments__group footer__departments__group_1">

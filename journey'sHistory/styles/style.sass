@@ -94,78 +94,78 @@ a
 
 
 .main__history
-    &_h2
+    &_title
       margin-bottom: 24px
-    &__filter
+      font-size: 28px
+      line-height: 42px
+    &__filter-button
       height: 48px
       width: 100%
       margin-bottom: 24px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      background: none
+      border: 1px solid #CCCCCC
+      border-radius: 4px
+      padding: 0 16px
+      &_p
+        @include fontBold
+        font-weight: 600
     &__days
       margin-bottom: 24px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
       &__day
         width: 100%
-    &__days__day
-      margin-bottom: 24px
+        margin-bottom: 24px
+        max-width: 543px
+        &_title
+          @include fontBold
+          color: $colorFontLightgray
+          font-weight: 600
+          margin-bottom: 8px
     &__carts
       width: 100%
-    &__cart:not(:last-child)
-      margin-bottom: 16px
-
-.main__history__carts
-  height: 100%
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: space-around
-
-.main__history__cart
-  max-width: 534px
-  height: 132px
-  padding: 16px
-  background-color: $colorBackground
-  border-radius: 4px
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: flex-start
-  &_station
-    width: 100%
-    display: flex
-    align-items: center
-    justify-content: space-between
-  &_title
-    @include fontBold
-    font-weight: 700
-  &_price
-    @include fontBold
-    color: $colorFontSite
-    font-weight: 800
-  &_date
-    @include fontParagraph
-  &_cart-name
-    @include fontParagraph
-    color: $colorFontSite
-    font-weight: 700
-  &_cart-number
-    @include fontParagraph
-
-.main__history_h2
-  font-size: 28px
-  line-height: 42px
-.main__history__days
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: space-around
-  margin-bottom: 24px
-  &__day
-    max-width: 543px
-    &_title
-      @include fontBold
-      color: $colorFontLightgray
-      font-weight: 600
-      margin-bottom: 8px
-
+      //height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      //justify-content: space-around
+    &__cart
+      min-width: 320px
+      height: 132px
+      padding: 16px
+      background-color: $colorBackground
+      border-radius: 4px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      &_station
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+      &_title
+        @include fontBold
+        font-weight: 700
+      &_price
+        @include fontBold
+        color: $colorFontSite
+        font-weight: 800
+      &_date
+        @include fontParagraph
+      &_cart-name
+        @include fontParagraph
+        color: $colorFontSite
+        font-weight: 700
+      &_cart-number
+        @include fontParagraph
+      &:not(:last-child)
+        margin-bottom: 16px
 
 .footer
   background-color: $colorBackground
@@ -241,7 +241,6 @@ a
     background-position: 100% 0
     margin-top: 26px
     margin-bottom: 32px
-
 
 
 @media screen and (min-width: 640px)
