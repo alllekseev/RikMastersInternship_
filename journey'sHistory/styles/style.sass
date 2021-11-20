@@ -10,13 +10,23 @@ $colorBackground: #F5F5FE
   line-height: 24px
 
 
-
 *
   margin: 0
   padding: 0
   box-sizing: border-box
   font-family: 'Lato', sans-serif
 
+html,
+body
+  height: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
 
 a
   text-decoration: none
@@ -157,6 +167,83 @@ a
       margin-bottom: 8px
 
 
+.footer
+  background-color: $colorBackground
+  &__legal-information
+    margin: 32px 0 24px 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    &_copyright
+      max-width: 301px
+      padding-bottom: 16px
+      @include fontBold
+      font-weight: 600
+    &_title
+      padding-bottom: 16px
+      @include fontParagraph
+      color: $colorFontSite
+    &_text
+      @include fontParagraph
+      &_link
+        color: $colorFontSite
+
+  &__departments
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -16px
+    &__group
+      min-height: 212px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      width: calc(100% / 12 * 6 - 32px)
+      margin: 0 16px
+      &_3
+        min-height: 100%
+        padding-top: 24px
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &_department
+      &_title
+        margin-bottom: 4px
+        @include fontParagraph
+        color: #212121
+        text-transform: uppercase
+        font-weight: 800
+        &:hover
+          color: $colorFontSite
+      &_describtion
+        @include fontParagraph
+    &__apps
+      &_app
+        display: block
+        background-position: center
+        background-repeat: no-repeat
+      &_app-store
+        width: 117.92px
+        height: 38.25px
+        margin-bottom: 16px
+        background-image: url(../../src/images/app-store.svg)
+      &_google-play
+        width: 135px
+        height: 40px
+        background-image: url(../../src/images/google-play.svg)
+  &__logo
+    height: 48px
+    background-image: url(../../src/images/footer-logo.svg)
+    background-repeat: no-repeat
+    background-position: 100% 0
+    margin-top: 26px
+    margin-bottom: 32px
+
+
+
 @media screen and (min-width: 640px)
   .container
     padding: 0 48px
@@ -178,11 +265,24 @@ a
       font-size: 30px //подогнать размер
       &:active // убрать при перекидывании на React
           background-color: #777777
+  .footer
+    &__departments
+      &__group
+        min-height: 192px
+        width: calc(100% / 12 * 4 - 32px)
+        &_3
+          padding-top: 0
+          flex-direction: column
 
 
 @media screen and (min-width: 880px)
   .container
     padding: 0 72px
+    &__footer
+      //position: relative
+      display: flex
+      max-width: 880px
+
 
   .header
     margin-top: 32px
@@ -231,6 +331,40 @@ a
       justify-content: space-between
       align-items: flex-start
 
+  .footer
+    position: relative
+    &__legal-information
+      width: 288px
+      margin-top: 48px
+      margin-right: 32px
+      justify-content: normal
+    &__departments
+      //max-width: 416px
+      margin-top: 48px
+      &_department
+        &_title
+          min-width: 64px
+        &_description
+          max-width: 224px
+      &__group
+        //max-width: 416px
+        flex-direction: row
+        justify-content: space-between
+        width: calc(100% / 12 * 12 - 32px)
+        min-height: 64px
+        &_3
+          padding-top: 32px
+          flex-direction: row
+      &__apps
+        width: 224px
+    &__logo
+      position: absolute
+      width: 100%
+      margin: 0 -28px
+      bottom: 42px
+      right: 28px
+
+
 
   .contact-info
     &__number
@@ -256,6 +390,8 @@ a
 @media screen and (min-width: 1280px)
   .container
     padding: 0 176px
+    &__footer
+      max-width: 1280px
 
   .header
     margin: 40px 0 48px 0
@@ -274,12 +410,25 @@ a
         font-weight: 600
         &:hover
           color: $colorFontSite
+  .footer
+    &__legal-information
+      min-width: 288px
+    &__departments
+      flex-direction: row
+      &__group
+        flex-direction: column
+        max-height: 220px
+        width: calc(100% / 12 * 4 - 32px)
+        &_3
+          padding-top: 0
 
 
 @media screen and (min-width: 1920px)
   .container
     max-width: 1920px
     padding: 0 340px
+    &__footer
+      max-width: 1980px
   .header
     height: 222px
     &__header-top
@@ -301,7 +450,12 @@ a
       &__log-out
         margin-left: 24px
         padding-left: 24px
-
+  .footer
+    &__legal-information
+      min-width: 498px
+    &__departments
+      &__group
+        max-height: 200px
 
 
 
