@@ -46,79 +46,161 @@
                     </button>
                 </div>
             </header>
-            <main class="main__history">
-                <div class="container">
-                    <h2 class="main__history_title">История проездов</h2>
-                    <button class="main__history__filter-button" type="text">
-                        <p class="main__history__filter-button_p">Фильтр</p>
-                        <i class="fas fa-angle-down angle"></i> <!-- С помощью JS будет меняться иконка -->
-                    </button>
-                    <div class="main__history__days" id="history__days">
-                        <div class="main__history__days__day" id="history__day">
-                            <p class="main__history__days__day_title">Сегодня</p>
-                            <div class="main__history__carts">
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
-                                    </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
+            <main class="main-history-page">
+                <div class="container container__filter">
+                    <section class="filter main-history-page_section">
+                        <h2 class="filter_h2">Фильтр</h2>
+                        <div class="filter__date">
+                            <div class="filter__date__title filter__title">
+                                <h3 class="filter__date__title_h3">Дата поездки</h3>
+                                <button class="filter__button">
+                                    <p class="filter__button_name">Свернуть</p>
+                                    <i class="fas fa-angle-up angle"></i>
+                                </button>
+                            </div>
+                            <div class="filter__date__calendar">
+                                <p class="filter__date__calendar_name">Дата проезда</p>
+                                <button class="filter__date__calendar__button">
+                                    <p class="filter__date__calendar__button_p">__.__.____</p>
+                                    <i class="fas fa-calendar-week filter__date__calendar__button_icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="filter__owner">
+                            <div class="filter__owner__title filter__title">
+                                <h3 class="filter__title_h3">Носитель</h3>
+                                <button class="filter__button">
+                                    <p class="filter__button_name">Свернуть</p>
+                                    <i class="fas fa-angle-up angle"></i>
+                                </button>
+                            </div>
+                            <div class="filter__owner__carts">
+                                <div class="filter__owner__carts__cart">
+                                    <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-1" name="cart-check" value="checked">
+                                    <label for="filterRadio-1" class="filter__owner__carts__cart_content">
+                                        <img src="../src/images/filter-cart-blue.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">
+                                        <div class="filter__owner__carts__cart__data">
+                                            <p class="filter__owner__carts__cart__data_name">Моя тройка</p>
+                                            <p class="filter__owner__carts__cart__data_number">1234 456 355</p>
+                                        </div>
+                                    </label>
+                                    <!--                                        <img src="" alt="filter-cart-img" class="filter__owner__carts__cart_img">-->
+                                    <!--                                        <div class="filter__owner__carts__cart__data">-->
+                                    <!--                                            <p class="filter__owner__carts__cart__data_name">Моя тройка</p>-->
+                                    <!--                                            <p class="filter__owner__carts__cart__data_name">1234 456 355</p>-->
+                                    <!--                                        </div>-->
                                 </div>
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
-                                    </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
+                                <div class="filter__owner__carts__cart">
+                                    <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-2" name="cart-check" value="checked">
+                                    <label for="filterRadio-2" class="filter__owner__carts__cart_content">
+                                        <img src="../src/images/filter-cart-orange.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">
+                                        <div class="filter__owner__carts__cart__data">
+                                            <p class="filter__owner__carts__cart__data_name">Моя тройка</p>
+                                            <div class="filter__owner__carts__cart__data_number_elements">
+                                                <p class="filter__owner__carts__cart__data_number">1234 456 355</p>
+                                                <p class="filter__owner__carts__cart__data_number">08/21</p>
+                                            </div>
+                                        </div>
+                                    </label>
                                 </div>
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
-                                    </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
+                                <div class="filter__owner__carts__cart">
+                                    <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-3" name="cart-check" value="checked" disabled="disabled">
+                                    <label for="filterRadio-3" class="filter__owner__carts__cart_content filter__owner__carts__cart_content_disabled">
+                                        <img src="../src/images/filter-cart-blue.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">
+                                        <div class="filter__owner__carts__cart__data">
+                                            <p class="filter__owner__carts__cart__data_name">Моя тройка</p>
+                                            <p class="filter__owner__carts__cart__data_number">1234 456 355</p>
+                                        </div>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="main__history__days__day" id="history__day">
-                            <p class="main__history__days__day_title">Сегодня</p>
-                            <div class="main__history__carts">
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
+                        <button class="filter__button-save">Сохранить</button>
+                    </section>
+                    <section class="main-history main-history-page_section">
+                        <h2 class="main-history_title">История проездов</h2>
+                        <button class="main-history__filter-button" type="text">
+                            <p class="main-history__filter-button_p">Фильтр</p>
+                            <i class="fas fa-angle-down angle"></i> <!-- С помощью JS будет меняться иконка -->
+                        </button>
+                        <div class="main-history__days" id="history__days">
+                            <div class="main-history__days__day" id="history__day">
+                                <p class="main-history__days__day_title">Сегодня</p>
+                                <div class="main-history__carts">
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
                                     </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
+                                    </div>
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
+                                    </div>
                                 </div>
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
+                            </div>
+                            <div class="main-history__days__day" id="history__day">
+                                <p class="main-history__days__day_title">Сегодня</p>
+                                <div class="main-history__carts">
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
                                     </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
-                                </div>
-                                <div class="main__history__cart">
-                                    <div class="main__history__cart_station">
-                                        <span class="main__history__cart_title">Станция метро Саларьево</span>
-                                        <span class="main__history__cart_price">38&#8381</span>
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
                                     </div>
-                                    <p class="main__history__cart_date">16:03, 06.04.2019</p>
-                                    <p class="main__history__cart_cart-name">Моя тройка</p>
-                                    <p class="main__history__cart_cart-number">1234 567 890</p>
+                                    <div class="main-history__cart">
+                                        <div class="main-history__cart_station">
+                                            <span class="main-history__cart_title">Станция метро Саларьево</span>
+                                            <span class="main-history__cart_price">38&#8381</span>
+                                        </div>
+                                        <p class="main-history__cart_date">16:03, 06.04.2019</p>
+                                        <p class="main-history__cart_cart-name">Моя тройка</p>
+                                        <p class="main-history__cart_cart-number">1234 567 890</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="main-history__item-list">
+                            <ul class="main-history__item-list__pages">
+                                <li><button class="main-history__item-list__pages_button fas fa-angle-left"></button></li>
+                                <li class="main-history__item-list__pages_page main-history__item-list__pages_page_selected">1</li> <!-- selected сделать id -->
+                                <li class="main-history__item-list__pages_page">2</li>
+                                <li class="main-history__item-list__pages_page">3</li>
+                                <li class="main-history__item-list__pages_page">4</li>
+                                <li class="main-history__item-list__pages_page">5</li>
+                                <li><button class="main-history__item-list__pages_button main-history__item-list__pages_button_selected fas fa-angle-right"></button></li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>
