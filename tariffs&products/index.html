@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tariffss and products</title>
+    <script src="https://kit.fontawesome.com/b53c8c5019.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container container__header">
+                    <div class="header__header-top">
+                        <div class="header__header-left">
+                            <img src="../src/images/mosmetro.svg" alt="mosmetro-logo" class="header__header-left_img">
+                            <h2 class="header__header-left_title">Личный кабинет пассажира</h2>
+                        </div>
+                        <div class="header__header-middle">
+                            <div class="header__header-middle__contact-info">
+                                <p class="contact-info__number">+7 495 539-54-54</p>
+                                <p class="contact-info__provider"><span class="contact-info__provider_num">3210 </span>(Билайн, МТС, Мегафон, Tele2)</p>
+                                <a href="#" class="contact-info__link">Контакт-центр «Московский транспорт»</a>
+                            </div>
+                        </div>
+                        <div class="header__header-right">
+                            <div class="header__header-right__buttons">
+                                <button class="header__header-right__user-img"></button> <!-- Кнопка используется для того, чтобы при нажатии появлялось контекстное меню -->
+                                <a href="#" class="header__header-right__user-number">+7 935 435 34 43</a>
+                                <a href="#" class="header__header-right__user-name">Иванов Иван Иванович</a>
+                                <button class="header__header-right__log-out">Выйти</button>
+                            </div>
+                            <button class="fas fa-bars header__header-right__icon"></button>
+                        </div>
+                    </div>
+                    <button class="header__header-button">
+                        <i class="fas fa-angle-left angle"></i>
+                        <p class="header__header-button_text">Вернуться назад</p>
+                    </button>
+                </div>
+            </header>
+            <main class="tariffs">
+                <div class="container container__tariffs">
+                    <h2 class="tariffs_title">Тарифы и продукты</h2>
+                    <div class="tariffs__tickets">
+                        <div class="tariffs__ticket">
+                            <div class="tariffs__ticket_position">
+                                <img src="../src/images/tariff-ticket1.svg" class="tariffs__ticket_img" alt="Тариф единый">
+                                <div class="tariffs__ticket__description">
+                                    <h4 class="tariffs__ticket__description_title">Билет «Единый»</h4>
+                                    <p class="tariffs__ticket__description_text">Билет «Единый» позволяет совершать поездки на метро, монорельсе, автобусе, троллейбусе или трамвае. Одна поездка по билету равна одному проходу на любом виде транспорта. Билет действует на всей территории Москвы, включая Зону Б.</p>
+                                </div>
+                            </div>
+                            <button class="tariffs__ticket_button">Купить</button>
+                        </div>
+                        <div class="tariffs__ticket">
+                            <div class="tariffs__ticket_position">
+                                <img src="../src/images/tariff-ticket2.svg" class="tariffs__ticket_img" alt="Тариф единый">
+                                <div class="tariffs__ticket__description">
+                                    <h4 class="tariffs__ticket__description_title">Проездной ТАТ</h4>
+                                    <p class="tariffs__ticket__description_text">Проездной билет ТАТ (троллейбус, автобус, трамвай) предназначен для поездок на всех видах наземного общественного транспорта. Тариф удобен для тех, кто редко спускается в метрополитен или вообще им не пользуется, а передвигается по городу исключительно на наземном общественном транспорте.</p>
+                                </div>
+                            </div>
+                            <button class="tariffs__ticket_button">Купить</button>
+                        </div>
+                        <div class="tariffs__ticket">
+                            <div class="tariffs__ticket_position">
+                                <img src="../src/images/tariff-ticket3.svg" class="tariffs__ticket_img" alt="Тариф единый">
+                                <div class="tariffs__ticket__description">
+                                    <h4 class="tariffs__ticket__description_title">Билет «90 минут»</h4>
+                                    <p class="tariffs__ticket__description_text">Билет «90 минут» позволяет совершить 1 поездку в метро / монорельсе и неограниченное число пересадок на наземном транспорте в течение 90 минут.</p>
+                                </div>
+                            </div>
+                            <button class="tariffs__ticket_button">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="container container__footer">
+                <div class="footer__legal-information">
+                    <p class="footer__legal-information_copyright">ГУП «Московский метрополитен» 1935 — 2019 ©</p>
+                    <h4 class="footer__legal-information_title">Правовая информация</h4>
+                    <p class="footer__legal-information_text">Посещая сайт <a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a> Вы даете согласие на обработку файлов cookie, сбор которых осуществляется ГУП «Московский метрополитен» на условиях <a class="footer__legal-information_text_link" href="#">Политики обработки файлов cookie</a>. Метрополитен также может использовать указанные данные для их последующей обработки системами Яндекс.Метрика и др., которая осуществляется с целью функционирования сайта <a class="footer__legal-information_text_link" href="#">www.mosmetro.ru</a>.</p>
+                </div>
+                <div class="footer__departments">
+                    <div class="footer__departments__group footer__departments__group_1">
+                        <div class="footer__departments_department">
+                            <a href="#" class="footer__departments_department_title">MOS.RU</a>
+                            <p class="footer__departments_department_description">Правительство Москвы</p>
+                        </div>
+                        <div class="footer__departments_department">
+                            <a href="#" class="footer__departments_department_title">DT.MOS.RU</a>
+                            <p class="footer__departments_department_description">Департамент транспорта и развития дорожно-транспортной инфраструктуры</p>
+                        </div>
+                    </div>
+                    <div class="footer__departments__group footer__departments__group_2">
+                        <div class="footer__departments_department">
+                            <a href="#" class="footer__departments_department_title">MINTRANS.RU</a>
+                            <p class="footer__departments_department_description">Министерство Транспорта Российской Федерации</p>
+                        </div>
+                        <div class="footer__departments_department">
+                            <a href="#" class="footer__departments_department_title">MOSGORTRANS.RU</a>
+                            <p class="footer__departments_department_description">Государственное унитарное предприятие Мосгортранс</p>
+                        </div>
+                    </div>
+                    <div class="footer__departments__group footer__departments__group_3">
+                        <div class="footer__departments_department">
+                            <a href="#" class="footer__departments_department_title">TRANSPORT.MOS.RU</a>
+                            <p class="footer__departments_department_description">Московский Транспорт </p>
+                        </div>
+                        <div class="footer__departments__apps">
+                            <a href="#" class="footer__departments__apps_app footer__departments__apps_app-store"></a>
+                            <a href="#" class="footer__departments__apps_app footer__departments__apps_google-play"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__logo"></div>
+        </footer>
+    </div>
+</body>
+</html>
