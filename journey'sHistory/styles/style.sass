@@ -46,8 +46,6 @@ li
     display: flex
     flex-direction: column
     justify-content: space-between
-
-
 .header
   height: 132px
   margin: 24px 0 32px 0
@@ -80,7 +78,6 @@ li
       font-size: 30px //подогнать размер
       &:active // убрать при перекидывании на React
         background-color: #777777
-
   &__header-button
     width: 155px
     height: 44px
@@ -93,11 +90,8 @@ li
     &_text
       font-weight: 700
       color: $colorFontSite
-
-
 .filter
   display: none
-
 .main-history
   &_title
     margin-bottom: 24px
@@ -130,7 +124,6 @@ li
         font-weight: 600
         margin-bottom: 8px
   &__carts
-    //max-width: 543px
     display: flex
     flex-wrap: wrap
     margin: 0 -8px
@@ -178,7 +171,7 @@ li
         border-radius: 4px
         font-size: 16px
         color: $colorFontLightgray
-        &_selected
+        &:hover
           color: $colorFontSite
       &_page
         width: 32px
@@ -191,8 +184,6 @@ li
         @include fontParagraph
         &_selected
           font-weight: 600
-
-
 .footer
   background-color: $colorBackground
   &__legal-information
@@ -269,6 +260,8 @@ li
     margin-bottom: 32px
 
 
+
+
 @media screen and (min-width: 640px)
   .container
     padding: 0 48px
@@ -294,7 +287,7 @@ li
           background-color: #777777
 
   .main-history
-    max-width: 543px
+    //max-width: 543px
     &__item-list
       min-width: 192px
       max-width: 328px
@@ -310,6 +303,7 @@ li
           flex-direction: column
 
 
+
 @media screen and (min-width: 880px)
   .container
     padding: 0 72px
@@ -323,7 +317,6 @@ li
     &__footer
       display: flex
       max-width: 880px
-
 
   .header
     margin-top: 32px
@@ -372,9 +365,8 @@ li
       justify-content: space-between
       align-items: flex-start
 
-
   .filter
-    min-width: 288px
+    max-width: 392px
     display: block
     grid-area: fl
     &__button
@@ -460,7 +452,7 @@ li
             flex-direction: column
             justify-content: space-between
             align-items: flex-start
-            min-width: 167px
+            min-width: 194px
             &_name
               @include fontBold
               font-weight: 600
@@ -469,7 +461,6 @@ li
               color: #777777
               &_elements
                 display: flex
-                min-width: 148px
                 justify-content: space-between
           &_radio
             position: absolute
@@ -515,15 +506,8 @@ li
       color: #FFFFFF
       font-weight: 600
 
-
-
-
-
-
   .main-history
     grid-area: mh
-    max-width: 416px
-
   .footer
     position: relative
     &__legal-information
@@ -556,8 +540,6 @@ li
       margin: 0 -28px
       bottom: 42px
       right: 28px
-
-
 
   .contact-info
     &__number
@@ -603,6 +585,9 @@ li
         font-weight: 600
         &:hover
           color: $colorFontSite
+  .filter
+    &__owner__carts__cart__data
+      min-width: 279px
   .footer
     &__legal-information
       min-width: 288px
@@ -643,6 +628,9 @@ li
       &__log-out
         margin-left: 24px
         padding-left: 24px
+  .filter
+    &__owner__carts__cart__data
+      max-width: 268px
   .footer
     &__legal-information
       min-width: 498px
