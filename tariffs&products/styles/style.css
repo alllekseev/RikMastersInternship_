@@ -143,6 +143,7 @@ li {
 .tariffs__ticket_button {
   height: 52px;
   width: 100%;
+  flex-shrink: 0;
   background-color: #D62828;
   border: none;
   border-radius: 4px;
@@ -395,6 +396,9 @@ li {
   }
   .tariffs__ticket__description {
     max-width: 619px;
+  }
+  .tariffs__ticket__description_text {
+    padding-right: 32px;
   }
 
   .footer {
