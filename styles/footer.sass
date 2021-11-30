@@ -1,80 +1,215 @@
 @import "general-styles"
+//.footer
+//  background-color: $colorBackground
+//  &__legal-information
+//
+//    margin: 32px 0 24px 0
+//
+//    &_copyright
+//
+//      padding-bottom: 16px
+//      @include fontBold
+//      font-weight: 500
+//    &_title
+//      padding-bottom: 16px
+//      @include fontParagraph
+//      color: $colorFontSite
+//      font-weight: 600
+//    &_text
+//      @include fontParagraph
+//      &_link
+//        color: $colorFontSite
+//  &__departments
+//    &__group
+//      //min-width: 144px
+//      margin-right: 33px
+//      width: calc(50% - 16px)
+//      &_main
+//        display: flex
+//        margin-bottom: 24px
+//      &_1
+//        height: 212px
+//        display: flex
+//        flex-direction: column
+//        justify-content: space-between
+//        width: calc(50% - 16px)
+//      &_2
+//        margin-right: 0
+//        width: calc(50% - 16px)
+//      &_3
+//        margin-right: 0
+//        display: flex
+//        justify-content: space-between
+//    &_department
+//      //width: calc(50% - 16px)
+//      &_title
+//        display: block
+//        padding-bottom: 4px
+//        @include fontParagraph
+//        color: #212121
+//        text-transform: uppercase
+//        font-weight: 600
+//        &:hover
+//          color: $colorFontSite
+//      &_last
+//        //margin-right: 0
+//        margin-top: 24px
+//      &_description
+//        height: 60px
+//        @include fontParagraph
+//      //&_3
+//    &__apps
+//      &_app
+//        display: block
+//        background-position: center
+//        background-repeat: no-repeat
+//      &_app-store
+//        width: 117.92px
+//        height: 38.25px
+//        margin-bottom: 16px
+//        background-image: url(../../src/images/app-store.svg)
+//      &_google-play
+//        width: 135px
+//        height: 40px
+//        background-image: url(../../src/images/google-play.svg)
+//  &__logo
+//    height: 48px
+//    background-image: url(../../src/images/footer-logo.svg)
+//    background-repeat: no-repeat
+//    background-position: 100% 0
+//    margin-top: 26px
+//    margin-bottom: 32px
+
+
+//.footer
+//  background-color: $colorBackground
+//  &__legal-information
+//    margin: 32px 0 24px 0
+//    display: flex
+//    flex-direction: column
+//    justify-content: space-between
+//    align-items: flex-start
+//    &_copyright
+//      max-width: 301px
+//      padding-bottom: 16px
+//      @include fontBold
+//      font-weight: 600
+//    &_title
+//      padding-bottom: 16px
+//      @include fontParagraph
+//      color: $colorFontSite
+//    &_text
+//      @include fontParagraph
+//      &_link
+//        color: $colorFontSite
+//
+//  &__departments
+//    width: 100%
+//    display: flex
+//    flex-wrap: wrap
+//    margin: 0 -16px
+//    &__group
+//      min-height: 212px
+//      display: flex
+//      flex-direction: column
+//      justify-content: space-between
+//      align-items: flex-start
+//      width: calc(100% / 12 * 6 - 32px)
+//      margin: 0 16px
+//      &_3
+//        min-height: 100%
+//        padding-top: 24px
+//        width: 100%
+//        display: flex
+//        flex-direction: row
+//        justify-content: space-between
+//    &_department
+//      &_title
+//        margin-bottom: 4px
+//        @include fontParagraph
+//        color: #212121
+//        text-transform: uppercase
+//        font-weight: 800
+//        &:hover
+//          color: $colorFontSite
+//      &_describtion
+//        @include fontParagraph
+//    &__apps
+//      &_app
+//        display: block
+//        background-position: center
+//        background-repeat: no-repeat
+//      &_app-store
+//        width: 117.92px
+//        height: 38.25px
+//        margin-bottom: 16px
+//        background-image: url(../../src/images/app-store.svg)
+//      &_google-play
+//        width: 135px
+//        height: 40px
+//        background-image: url(../../src/images/google-play.svg)
+//  &__logo
+//    height: 48px
+//    background-image: url(../../src/images/footer-logo.svg)
+//    background-repeat: no-repeat
+//    background-position: 100% 0
+//    margin-top: 26px
+//    margin-bottom: 32px
+
 .footer
   background-color: $colorBackground
   &__legal-information
-    //width: 86%
     margin: 32px 0 24px 0
-    //display: flex
-    //flex-direction: column
-    //justify-content: space-between
-    //align-items: flex-start
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
     &_copyright
-      //width: 75%
-      //max-width: 301px
+      max-width: 301px
       padding-bottom: 16px
       @include fontBold
-      font-weight: 500
+      font-weight: 600
     &_title
       padding-bottom: 16px
       @include fontParagraph
       color: $colorFontSite
-      font-weight: 600
     &_text
       @include fontParagraph
       &_link
         color: $colorFontSite
-  &__departments
-    //width: 100%
-    //display: flex
-    //flex-direction: column
-    //flex-wrap: wrap
-    //margin: 0 -16px
-    &__group
-      //min-height: 212px
-      //display: flex
-      //flex-direction: column
-      //justify-content: space-between
-      //align-items: flex-start
-      //width: calc(100% / 12 * 6 - 32px)
-      //margin: 0 16px
-      &_main
-        //display: flex
-      &_1
-        //margin-right: 33px
-        //width: 45%
-        & .footer__departments_department_last
 
-          //margin-top: 64px
-      &_2
-        //display: block
-        //width: 36%
+  &__departments
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -16px
+    &__group
+      min-height: 212px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      width: calc(100% / 12 * 6 - 32px)
+      margin: 0 16px
       &_3
-        //min-height: 100%
-        //padding-top: 24px
-        //width: 97%
-        //display: flex
-        //flex-direction: row
-        //justify-content: space-between
+        min-height: 100%
+        padding-top: 24px
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
     &_department
-      //margin-right: 32px
       &_title
-        display: block
-        padding-bottom: 4px
+        margin-bottom: 4px
         @include fontParagraph
         color: #212121
         text-transform: uppercase
-        font-weight: 600
+        font-weight: 800
         &:hover
           color: $colorFontSite
-      &_last
-        margin-top: 24px
-      &_description
+      &_describtion
         @include fontParagraph
-        //width: 143px
-      &_3
-        //margin-right: 32px
     &__apps
-      //padding-right: 40px
       &_app
         display: block
         background-position: center
@@ -95,14 +230,11 @@
     background-position: 100% 0
     margin-top: 26px
     margin-bottom: 32px
-
 @media screen and (min-width: 640px)
   .footer
     &__departments
       flex-direction: row
       &__group
-        //min-height: 192px
-        //width: calc(100% / 12 * 4 - 32px)
         &_main
           margin-right: 32px
         &_1
@@ -119,48 +251,27 @@
   .footer
     position: relative
     &__legal-information
-      width: 38%
-      //width: 288px
-      margin: 48px 32px 48px 0
+      width: 288px
+      margin-top: 48px
+      margin-right: 32px
       justify-content: normal
-      &_copyright
-        width: 90%
     &__departments
       //max-width: 416px
       margin-top: 48px
-      flex-direction: column
       &_department
-        width: 159px
-        margin-right: 32px
         &_title
           min-width: 64px
         &_description
           max-width: 224px
-        &_last
-          width: 224px
-          margin-right: 0
       &__group
-        //width: 100%
+        //max-width: 416px
         flex-direction: row
         justify-content: space-between
-        &_main
-          flex-direction: column
-          margin-right: 0
-        //max-width: 416px
-        //flex-direction: row
-        //justify-content: space-between
-        //width: calc(100% / 12 * 12 - 32px)
-        //min-height: 64px
-        &_1
-          width: 100%
-          margin-bottom: 32px
-          margin-right: 0
-        &_2
-          width: 100%
+        width: calc(100% / 12 * 12 - 32px)
+        min-height: 64px
         &_3
           padding-top: 32px
           flex-direction: row
-          align-items: flex-start
       &__apps
         width: 224px
     &__logo
@@ -169,7 +280,74 @@
       margin: 0 -28px
       bottom: 42px
       right: 28px
+
+
+  //.footer
+  //  position: relative
+  //  &__legal-information
+  //    width: 38%
+  //    //width: 288px
+  //    margin: 48px 32px 48px 0
+  //    justify-content: normal
+  //    &_copyright
+  //      width: 90%
+  //  &__departments
+  //    //max-width: 416px
+  //    margin-top: 48px
+  //    flex-direction: column
+  //    &_department
+  //      width: 159px
+  //      margin-right: 32px
+  //      &_title
+  //        min-width: 64px
+  //      &_description
+  //        max-width: 224px
+  //      &_last
+  //        width: 224px
+  //        margin-right: 0
+  //    &__group
+  //      //width: 100%
+  //      flex-direction: row
+  //      justify-content: space-between
+  //      &_main
+  //        flex-direction: column
+  //        margin-right: 0
+  //      //max-width: 416px
+  //      //flex-direction: row
+  //      //justify-content: space-between
+  //      //width: calc(100% / 12 * 12 - 32px)
+  //      //min-height: 64px
+  //      &_1
+  //        width: 100%
+  //        margin-bottom: 32px
+  //        margin-right: 0
+  //      &_2
+  //        width: 100%
+  //      &_3
+  //        padding-top: 32px
+  //        flex-direction: row
+  //        align-items: flex-start
+  //    &__apps
+  //      width: 224px
+  //  &__logo
+  //    position: absolute
+  //    width: 100%
+  //    margin: 0 -28px
+  //    bottom: 42px
+  //    right: 28px
 @media screen and (min-width: 1280px)
+  //.footer
+  //  &__legal-information
+  //    min-width: 288px
+  //  &__departments
+  //    flex-direction: row
+  //    &__group
+  //      flex-direction: column
+  //      max-height: 220px
+  //      width: calc(100% / 12 * 4 - 32px)
+  //      &_3
+  //        padding-top: 0
+
   .footer
     &__legal-information
       min-width: 288px
@@ -188,3 +366,10 @@
     &__departments
       &__group
         max-height: 200px
+        
+  //.footer
+  //  &__legal-information
+  //    min-width: 498px
+  //  &__departments
+  //    &__group
+  //      max-height: 200px
