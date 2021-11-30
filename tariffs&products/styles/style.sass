@@ -1,458 +1,148 @@
-$colorFontSite: #D62828
-$colorFontLightgray: #777777
-$colorBackground: #F5F5FE
-
-@mixin fontParagraph
-  font-size: 14px
-  line-height: 20px
-@mixin fontBold
-  font-size: 16px
-  line-height: 24px
-
-
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-  font-family: 'Lato', sans-serif
-
-html,
-body
-  height: 100%
-
-.wrapper
-  display: flex
-  flex-direction: column
-  height: 100%
-
-.content
-  flex: 1 0 auto
-
-a
-  text-decoration: none
-li
-  list-style-type: none
-
-.angle
-  color: $colorFontSite
-  font-size: 16px
-
+@import "../../styles/general-styles"
+@import "../../styles/header"
+@import "../../styles/footer"
 
 .container
   margin: 0 auto
   padding: 0 28px
   &__header
-    height: 100%
+    //height: auto
     display: flex
     flex-direction: column
     justify-content: space-between
+    max-width: 880px
   &__tariffs
-    max-width: 465px
+    max-width: 880px
 .header
-  height: 132px
-  margin: 24px 0 32px 0
+  height: auto
+  margin: 24px 0 0 0
   &__header-top
-    height: 56px
-    display: flex
-    justify-content: space-between
-    align-items: center
-  &__header-left
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-    &_img
-      height: 56px
-    &_title
-      display: none
-  &__header-middle
-    display: none
-  &__header-right
-    &__buttons
-      display: none
-    &__icon
-      border: none
-      background: none
-      width: 32px
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $colorFontSite
-      font-size: 30px //подогнать размер
-      &:active // убрать при перекидывании на React
-        background-color: #777777
+    margin-bottom: 0
   &__header-button
-    width: 155px
-    height: 44px
-    background: rgba(214, 40, 40, 0.16)
-    border-radius: 4px
-    border: none
-    display: flex
-    justify-content: space-around
-    align-items: center
-    &_text
-      font-weight: 700
-      color: $colorFontSite
+    display: none
+
 .tariffs
-  margin-bottom: 72px
+  margin-bottom: 64px
+  padding-top: 32px
   &_title
+    margin-bottom: 66px
     font-size: 24px
     line-height: 36px
-    margin-bottom: 66px
-    font-weight: 800
-  &__tickets
-    //min-height: 1612px
-    //display: flex
-    //flex-direction: column
-    //justify-content: space-between
-    //align-items: center
-    //max-width: 320px
-    display: flex
-    flex-wrap: wrap
-    margin: 0 -12px
+    font-weight: bold
   &__ticket
-    width: calc(100% / 12 * 12 - 24px)
-    margin: 12px
-    height: 516px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+    &:not(:last-child)
+      margin-bottom: 32px
+    &_img
+      margin-bottom: 16px
     &_position
-      height: 372px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
+      &:not(:last-child)
+        margin-bottom: 32px
     &__description
       &_title
+        margin-bottom: 8px
         font-size: 20px
         line-height: 30px
-        font-weight: 800
-        margin-bottom: 4px
+        font-weight: bold
       &_text
-        @include fontParagraph
+        font-size: 14px
+        line-height: 24px
     &_button
-      height: 52px
-      width: 100%
       flex-shrink: 0
-      background-color: $colorFontSite
-      border: none
-      border-radius: 4px
-      @include fontParagraph
-      color: #FFFFFF
-      font-weight: 600
-.footer
-  background-color: $colorBackground
-  &__legal-information
-    margin: 32px 0 24px 0
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    align-items: flex-start
-    &_copyright
-      max-width: 301px
-      padding-bottom: 16px
-      @include fontBold
-      font-weight: 600
-    &_title
-      padding-bottom: 16px
-      @include fontParagraph
-      color: $colorFontSite
-    &_text
-      @include fontParagraph
-      &_link
-        color: $colorFontSite
-
-  &__departments
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    margin: 0 -16px
-    &__group
-      min-height: 212px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-      width: calc(100% / 12 * 6 - 32px)
-      margin: 0 16px
-      &_3
-        min-height: 100%
-        padding-top: 24px
+      margin-top: 92px
+      &_text
+        height: 52px
         width: 100%
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-    &_department
-      &_title
-        margin-bottom: 4px
+        background-color: $colorFontSite
+        border: none
+        border-radius: 4px
         @include fontParagraph
-        color: #212121
-        text-transform: uppercase
-        font-weight: 800
-        &:hover
-          color: $colorFontSite
-      &_describtion
-        @include fontParagraph
-    &__apps
-      &_app
-        display: block
-        background-position: center
-        background-repeat: no-repeat
-      &_app-store
-        width: 117.92px
-        height: 38.25px
-        margin-bottom: 16px
-        background-image: url(../../src/images/app-store.svg)
-      &_google-play
-        width: 135px
-        height: 40px
-        background-image: url(../../src/images/google-play.svg)
-  &__logo
-    height: 48px
-    background-image: url(../../src/images/footer-logo.svg)
-    background-repeat: no-repeat
-    background-position: 100% 0
-    margin-top: 26px
-    margin-bottom: 32px
-
+        color: #FFFFFF
+        font-weight: 600
 
 @media screen and (min-width: 640px)
   .container
     padding: 0 48px
-    &__tariffs
-      max-width: 100%
-  .header
-    height: 132px
-    &__header-left
-      width: 100%
-      max-width: 303px
-      display: flex
-      justify-content: space-between
-      align-items: center
-      &_title
-        display: flex
-        max-width: 160px
-        font-size: 18px
-        line-height: 28px
-    &__header-right__icon
-      color: $colorFontSite
-      font-size: 30px //подогнать размер
-      &:active // убрать при перекидывании на React
-          background-color: #777777
   .tariffs
     &_title
       margin-bottom: 67px
-
-    &__tickets
-      margin: 0 -16px
-
     &__ticket
-      width: calc(100% / 12 * 12 - 32px)
-      margin: 16px
-      align-items: flex-end
-      display: flex
-      flex-direction: column
-      height: 100%
+      //width: calc(100% / 12 * 12 - 32px)
+      //margin: 16px
+      //align-items: flex-end
+      //display: flex
+      //flex-direction: column
+      //height: 100%
       &_position
-        height: 226px
-        flex-direction: row
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        &_top
+          display: flex
+          margin-bottom: 20px
       &_img
         height: 100px
         width: 160px
         margin-right: 32px
+        margin-bottom: 0
       &_button
+        margin-top: 0
         height: 52px
         width: 160px
-  .footer
-    &__departments
-      &__group
-        min-height: 192px
-        width: calc(100% / 12 * 4 - 32px)
-        &_3
-          padding-top: 0
-          flex-direction: column
-
-
 
 @media screen and (min-width: 880px)
   .container
     padding: 0 72px
     &__footer
       display: flex
-      max-width: 880px
-
-  .header
-    margin-top: 32px
-    height: 156px
-    &__top
-      height: 64px
-    &__header-right
-      &__buttons
-        max-width: 118px
-        display: flex
-        justify-content: space-between
-        align-items: center
-      &__user-img
-        background-image: url(../../src/images/user-img.svg)
-        background-position: center
-        background-repeat: no-repeat
-        width: 48px
-        height: 48px
-        border: none
-        border-radius: 50%
-      &__user-number
-        display: none
-      &__user-name
-        display: none
-      &__log-out
-        margin-left: 8px
-        @include fontBold
-        color: $colorFontSite
-        background: none
-        border: none
-        border-left: 1px solid $colorFontSite
-        padding-left: 8px
-        font-weight: 600
-      &__icon
-        display: none
-    &__header-middle
-      //max-width: 197px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-    &__contact-info
-      height: 64px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-
   .tariffs
+    margin-bottom: 72px
+    padding-top: 40px
     &_title
       margin-bottom: 70px
-    &__tickets
-      margin: 0 -16px
+      font-size: 28px
+      line-height: 42px
     &__ticket
-      width: calc(100% / 12 * 12 - 32px)
-      margin: 16px
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      align-items: center
-      &__description
-        max-width: 619px
-    &__ticket__description_text
-      padding-right: 32px
-  .footer
-    position: relative
-    &__legal-information
-      width: 288px
-      margin-top: 48px
-      margin-right: 32px
-      justify-content: normal
-    &__departments
-      //max-width: 416px
-      margin-top: 48px
-      &_department
-        &_title
-          min-width: 64px
-        &_description
-          max-width: 224px
-      &__group
-        //max-width: 416px
+      &_position
         flex-direction: row
-        justify-content: space-between
-        width: calc(100% / 12 * 12 - 32px)
-        min-height: 64px
-        &_3
-          padding-top: 32px
-          flex-direction: row
-      &__apps
-        width: 224px
-    &__logo
-      position: absolute
-      width: 100%
-      margin: 0 -28px
-      bottom: 42px
-      right: 28px
-
-  .contact-info
-    &__number
-      @include fontBold
-      color: $colorFontSite
-      font-weight: 800
-    &__provider
-      font-size: 11px
-      line-height: 18px
-      color: $colorFontLightgray
-      &_num
-        font-size: 12px
-        color: $colorFontSite
-        font-weight: 600
-    &__link
-      font-size: 12px
-      line-height: 18px
-      color: $colorFontSite
-      &:hover
-        text-decoration: $colorFontSite
-
-
+        align-items: baseline
+        &_top
+          padding-right: 32px
+      &__description
+        &_title
+          font-size: 24px
+          line-height: 36px
+    &__ticket__description_text
+      font-size: 16px
+      line-height: 28px
 
 @media screen and (min-width: 1280px)
   .container
     padding: 0 176px
-    &__tariffs
-      max-width: 1240px
+    &__header,
+    &__tariffs,
     &__footer
       max-width: 1280px
 
-  .header
-    margin: 40px 0 48px 0
-    height: 180px
-    &__header-top
-      height: 72px
-    &__header-right
-      &__buttons
-        max-width: 258px
-      &__user-img
-        margin-right: 16px
-      &__user-number
-        display: block
-        color: #212121
-        @include fontBold
-        font-weight: 600
-        &:hover
-          color: $colorFontSite
   .tariffs
+    &_title
+      margin-bottom: 92px
+      font-size: 32px
+      line-height: 48px
     &__ticket
       &_position
-        height: 100%
-        justify-content: space-between
+        align-items: center
       &_img
         height: 131px
         width: 208px
       &__description
-        max-width: 528px
-        margin-right: 32px
         &_title
           font-size: 28px
           line-height: 42px
         &_text
           font-size: 18px
           line-height: 32px
-  .footer
-    &__legal-information
-      min-width: 288px
-    &__departments
-      flex-direction: row
-      &__group
-        flex-direction: column
-        max-height: 220px
-        width: calc(100% / 12 * 4 - 32px)
-        &_3
-          padding-top: 0
-
-
+      &_button
+        width: 128px
 
 @media screen and (min-width: 1920px)
   .container
@@ -460,34 +150,12 @@ li
     padding: 0 340px
     &__footer
       max-width: 1980px
-  .header
-    height: 222px
-    &__header-top
-      height: 81.34px
-    &__header-right
-      &__buttons
-        max-width: 350px
-      &__user-img
-        background-image: url(../../src/images/user-avatar.svg)
-      &__user-number
-        display: none
-      &__user-name
-        display: block
-        color: #212121
-        @include fontBold
-        font-weight: 600
-        &:hover
-          color: $colorFontSite
-      &__log-out
-        margin-left: 24px
-        padding-left: 24px
   .tariffs
-
+    margin-bottom: 127px
     &__ticket__description
       max-width: 710px
-  .footer
-    &__legal-information
-      min-width: 498px
-    &__departments
-      &__group
-        max-height: 200px
+    &__ticket
+      &_button
+        width: 180px
+      &_position
+        align-items: flex-end

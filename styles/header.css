@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  height: 132px;
+  margin: 24px 0 32px 0;
+}
+.header__header-top {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header__header-left_img {
+  height: 56px;
+}
+.header__header-left_title {
+  display: none;
+}
+.header__header-middle {
+  display: none;
+}
+.header__header-right__buttons {
+  display: none;
+}
+.header__header-right_burger {
+  width: 32px;
+  height: 24px;
+  border: none;
+  background-color: rgba(0, 0, 255, 0);
+  background-image: url("../src/images/header-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__header-right_burger:hover {
+  color: #0000ff;
+  background-image: url("../src/images/Group_26.svg");
+}
+.header__header-button {
+  padding: 0 16px 0 17px;
+  width: 155px;
+  height: 44px;
+  background: rgba(214, 40, 40, 0.16);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.header__header-button_text {
+  padding-left: 13px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #D62828;
+}
+
+@media screen and (min-width: 640px) {
+  .header {
+    height: 132px;
+  }
+  .header__header-left {
+    width: 100%;
+    max-width: 303px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__header-left_title {
+    display: flex;
+    max-width: 160px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .header {
+    margin-top: 32px;
+    height: 156px;
+  }
+  .header__top {
+    height: 64px;
+  }
+  .header__header-right__buttons {
+    max-width: 118px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__header-right__user-img {
+    background-image: url(../src/images/user-img.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+  }
+  .header__header-right__user-number {
+    display: none;
+  }
+  .header__header-right__user-name {
+    display: none;
+  }
+  .header__header-right__log-out {
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #D62828;
+    background: none;
+    border: none;
+    border-left: 1px solid #D62828;
+    padding-left: 8px;
+    font-weight: 600;
+  }
+  .header__header-right_burger {
+    display: none;
+  }
+  .header__header-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header__contact-info {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 880px) {
+  .header {
+    margin: 40px 0 48px 0;
+    height: 180px;
+  }
+  .header__header-top {
+    height: 72px;
+  }
+  .header__header-right__buttons {
+    max-width: 258px;
+  }
+  .header__header-right__user-img {
+    margin-right: 16px;
+  }
+  .header__header-right__user-number {
+    display: block;
+    color: #212121;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .header__header-right__user-number:hover {
+    color: #D62828;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    height: 222px;
+  }
+  .header__header-top {
+    height: 81.34px;
+  }
+  .header__header-right__buttons {
+    max-width: 350px;
+  }
+  .header__header-right__user-img {
+    background-image: url(../src/images/user-avatar.svg);
+  }
+  .header__header-right__user-number {
+    display: none;
+  }
+  .header__header-right__user-name {
+    display: block;
+    color: #212121;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .header__header-right__user-name:hover {
+    color: #D62828;
+  }
+  .header__header-right__log-out {
+    margin-left: 24px;
+    padding-left: 24px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

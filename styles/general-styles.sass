@@ -1,0 +1,51 @@
+$colorFontSite: #D62828
+$colorFontLightgray: #777777
+$colorBackground: #F5F5FE
+@font-face
+  font-family: 'Futura PT'
+  font-weight: bold
+  src: url('../../fonts/futura_pt_bold.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT Book'
+  src: url('../../fonts/futura_pt_book.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT'
+  font-weight: 600
+  src: url('../../fonts/futura_pt_demi.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT'
+  font-weight: 500
+  src: url('../../fonts/futura_pt_medium.ttf') format('truetype')
+
+@mixin fontParagraph
+  font-size: 14px
+  line-height: 20px
+@mixin fontBold
+  font-size: 16px
+  line-height: 24px
+  font-family: 'Futura PT', sans-serif
+  font-weight: bold
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Futura PT Book', sans-serif
+
+html,
+body
+  height: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+a
+  text-decoration: none
+li
+  list-style-type: none

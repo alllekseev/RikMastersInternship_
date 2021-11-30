@@ -1,42 +1,6 @@
-$colorFontSite: #D62828
-$colorFontLightgray: #777777
-$colorBackground: #F5F5FE
-
-@mixin fontParagraph
-  font-size: 14px
-  line-height: 20px
-@mixin fontBold
-  font-size: 16px
-  line-height: 24px
-
-
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-  font-family: 'Lato', sans-serif
-
-html,
-body
-  height: 100%
-
-.wrapper
-  display: flex
-  flex-direction: column
-  height: 100%
-
-.content
-  flex: 1 0 auto
-
-a
-  text-decoration: none
-li
-  list-style-type: none
-
-.angle
-  color: $colorFontSite
-  font-size: 16px
-
+@import "../../styles/general-styles"
+@import "../../styles/header"
+@import "../../styles/footer"
 
 .container
   margin: 0 auto
@@ -46,87 +10,48 @@ li
     display: flex
     flex-direction: column
     justify-content: space-between
-  &__ticket
-    //max-width: 465px
 .header
-  height: 132px
-  margin: 24px 0 32px 0
+  height: auto
+  margin-bottom: 0
   &__header-top
-    height: 56px
-    display: flex
-    justify-content: space-between
-    align-items: center
-  &__header-left
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-    &_img
-      height: 56px
-    &_title
-      display: none
-  &__header-middle
-    display: none
-  &__header-right
-    &__buttons
-      display: none
-    &__icon
-      border: none
-      background: none
-      width: 32px
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $colorFontSite
-      font-size: 30px //подогнать размер
-      &:active // убрать при перекидывании на React
-        background-color: #777777
-  &__header-button
-    width: 155px
-    height: 44px
-    background: rgba(214, 40, 40, 0.16)
-    border-radius: 4px
-    border: none
-    display: flex
-    justify-content: space-around
-    align-items: center
-    &_text
-      font-weight: 700
-      color: $colorFontSite
+    margin-bottom: 40px
 .ticket
+  padding-top: 32px
   margin-bottom: 24px
   &_title
+    margin-bottom: 24px
     font-size: 24px
     line-height: 36px
-    margin-bottom: 24px
+    font-weight: bold
   &__description
     display: flex
     flex-direction: column
     justify-content: space-between
     margin-bottom: 32px
     &_img
-      margin-bottom: 24px
+      margin-bottom: 25px
     &_text
-      @include fontParagraph
+      font-size: 14px
+      line-height: 24px
       &:not(:last-child)
         margin-bottom: 8px
   &__purchase
     &__details
       &_title
+        margin-bottom: 16px
         font-size: 18px
         line-height: 28px
-        margin-bottom: 16px
+        font-weight: bold
       &_text
-        @include fontParagraph
+        font-size: 14px
+        line-height: 24px
         margin-bottom: 16px
       &__forms
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        height: 156px
+        //height: 156px
         &_ticket-type
           &_title
             font-size: 14px
-            line-height: 20px
+            line-height: 24px
             font-weight: 600
             margin-bottom: 4px
             padding-left: 12px
@@ -134,12 +59,14 @@ li
             height: 44px
             width: 100%
             padding: 12px
-            background: none
-            border: 1px solid #CCCCCC
-            border-radius: 4px
             display: flex
             justify-content: space-between
             align-items: center
+            background: none
+            border: 1px solid #CCCCCC
+            border-radius: 4px
+            //font-size: 14px
+            //line-height: 20px
 
             &_choice
               font-size: 14px
@@ -152,7 +79,7 @@ li
               border-top: 6px solid #777777
               display: block
       &__footer
-        height: 58px
+        //height: 51px
         margin-top: 16px
         margin-bottom: 48px
         display: flex
@@ -164,22 +91,33 @@ li
           justify-content: space-between
           align-items: flex-start
           &_title
-            @include fontParagraph
+            margin-bottom: 4px
+            font-size: 14px
+            line-height: 24px
           &_total-price
             font-size: 20px
             line-height: 30px
-            font-weight: 800
+            font-weight: 600
         &_button
           height: 52px
           min-width: 133px
           display: flex
           justify-content: center
           align-items: center
-          color: #FFFFFF
-          background-color: $colorFontSite
           border-radius: 4px
           border: none
+          color: #FFFFFF
+          font-size: 14px
+          line-height: 24px
+          background-color: $colorFontSite
+          font-weight: 600
+
   &__tariffs
+    &_title
+      margin-bottom: 32px
+      font-size: 24px
+      line-height: 36px
+      font-weight: bold
     &_h2
       margin-bottom: 32px
     &__period
@@ -189,6 +127,9 @@ li
         margin-bottom: 64px
       &_h4
         margin-bottom: 16px
+        font-size: 18px
+        line-height: 28px
+        font-weight: bold
       &_text
         font-size: 14px
         line-height: 24px
@@ -196,7 +137,7 @@ li
         margin-top: 16px
         display: flex
         justify-content: space-between
-        align-items: center
+        //align-items: center
         &:not(:last-child)
           padding-bottom: 16px
           border-bottom: 1px solid #F5F5FE
@@ -205,114 +146,23 @@ li
           @include fontBold
           font-weight: 600
           &_description
-            @include fontParagraph
-            color: #777777
+            width: 90%
             padding-top: 4px
             padding-right: 16px
+            @include fontParagraph
+            color: #777777
+
         &_price
           flex-shrink: 0
           @include fontBold
           font-weight: 800
           color: $colorFontSite
-.footer
-  background-color: $colorBackground
-  &__legal-information
-    margin: 32px 0 24px 0
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    align-items: flex-start
-    &_copyright
-      max-width: 301px
-      padding-bottom: 16px
-      @include fontBold
-      font-weight: 600
-    &_title
-      padding-bottom: 16px
-      @include fontParagraph
-      color: $colorFontSite
-    &_text
-      @include fontParagraph
-      &_link
-        color: $colorFontSite
-
-  &__departments
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    margin: 0 -16px
-    &__group
-      min-height: 212px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-      width: calc(100% / 12 * 6 - 32px)
-      margin: 0 16px
-      &_3
-        min-height: 100%
-        padding-top: 24px
-        width: 100%
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-    &_department
-      &_title
-        margin-bottom: 4px
-        @include fontParagraph
-        color: #212121
-        text-transform: uppercase
-        font-weight: 800
-        &:hover
-          color: $colorFontSite
-      &_describtion
-        @include fontParagraph
-    &__apps
-      &_app
-        display: block
-        background-position: center
-        background-repeat: no-repeat
-      &_app-store
-        width: 117.92px
-        height: 38.25px
-        margin-bottom: 16px
-        background-image: url(../../src/images/app-store.svg)
-      &_google-play
-        width: 135px
-        height: 40px
-        background-image: url(../../src/images/google-play.svg)
-  &__logo
-    height: 48px
-    background-image: url(../../src/images/footer-logo.svg)
-    background-repeat: no-repeat
-    background-position: 100% 0
-    margin-top: 26px
-    margin-bottom: 32px
-
 
 @media screen and (min-width: 640px)
   .container
     padding: 0 48px
     &__tariffs
       max-width: 100%
-  .header
-    height: 132px
-    &__header-left
-      width: 100%
-      max-width: 303px
-      display: flex
-      justify-content: space-between
-      align-items: center
-      &_title
-        display: flex
-        max-width: 160px
-        font-size: 18px
-        line-height: 28px
-    &__header-right__icon
-      color: $colorFontSite
-      font-size: 30px //подогнать размер
-      &:active // убрать при перекидывании на React
-          background-color: #777777
   .ticket
     &__description
       flex-direction: row
@@ -325,27 +175,18 @@ li
     &__purchase
       &__details
         &__forms
-          height: 100%
-          margin: 0 -16px
-          flex-direction: row
+          display: flex
+          justify-content: space-between
+          //height: 100%
+          //margin: 0 -16px
+          //flex-direction: row
           &_ticket-type
-            width: calc(100% / 12 * 6 - 32px)
-            margin: 0 16px
+            width: 100%
+            &:not(:last-child)
+              margin-right: 32px
         &__footer
           &_button
             width: 160px
-
-
-  .footer
-    &__departments
-      &__group
-        min-height: 192px
-        width: calc(100% / 12 * 4 - 32px)
-        &_3
-          padding-top: 0
-          flex-direction: column
-
-
 
 @media screen and (min-width: 880px)
   .container
@@ -354,55 +195,10 @@ li
       display: flex
       max-width: 880px
 
-  .header
-    margin-top: 32px
-    height: 156px
-    &__top
-      height: 64px
-    &__header-right
-      &__buttons
-        max-width: 118px
-        display: flex
-        justify-content: space-between
-        align-items: center
-      &__user-img
-        background-image: url(../../src/images/user-img.svg)
-        background-position: center
-        background-repeat: no-repeat
-        width: 48px
-        height: 48px
-        border: none
-        border-radius: 50%
-      &__user-number
-        display: none
-      &__user-name
-        display: none
-      &__log-out
-        margin-left: 8px
-        @include fontBold
-        color: $colorFontSite
-        background: none
-        border: none
-        border-left: 1px solid $colorFontSite
-        padding-left: 8px
-        font-weight: 600
-      &__icon
-        display: none
-    &__header-middle
-      //max-width: 197px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-    &__contact-info
-      height: 64px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: flex-start
-
   .ticket
-    &__title
+    padding-top: 40px
+    margin-bottom: 72px
+    &_title
       font-size: 28px
       line-height: 42px
     &__description
@@ -412,11 +208,17 @@ li
         min-height: 141px
         margin-right: 32px
         margin-bottom: 0
+      &_text
+        font-size: 16px
+        line-height: 28px
       &_text:not(:last-child)
         margin-bottom: 16px
     &__purchase
       &__details
         padding-right: 128px
+        &_title
+          font-size: 20px
+          line-height: 30px
         &__forms
           height: 100%
           margin: 0 -16px
@@ -428,65 +230,23 @@ li
           &_button
             width: 160px
     &__tariffs__period
+      &_h4
+        font-size: 20px
+        line-height: 30px
       &_text
-        width: 65%
-      &__info_time
-        width: 65%
-        &_description
-          width: 70%
-  .footer
-    position: relative
-    &__legal-information
-      width: 288px
-      margin-top: 48px
-      margin-right: 32px
-      justify-content: normal
-    &__departments
-      //max-width: 416px
-      margin-top: 48px
-      &_department
-        &_title
-          min-width: 64px
-        &_description
-          max-width: 224px
-      &__group
-        //max-width: 416px
-        flex-direction: row
-        justify-content: space-between
-        width: calc(100% / 12 * 12 - 32px)
-        min-height: 64px
-        &_3
-          padding-top: 32px
-          flex-direction: row
-      &__apps
-        width: 224px
-    &__logo
-      position: absolute
-      width: 100%
-      margin: 0 -28px
-      bottom: 42px
-      right: 28px
-
-  .contact-info
-    &__number
-      @include fontBold
-      color: $colorFontSite
-      font-weight: 800
-    &__provider
-      font-size: 11px
-      line-height: 18px
-      color: $colorFontLightgray
-      &_num
-        font-size: 12px
-        color: $colorFontSite
-        font-weight: 600
-    &__link
-      font-size: 12px
-      line-height: 18px
-      color: $colorFontSite
-      &:hover
-        text-decoration: $colorFontSite
-
+        font-size: 16px
+        line-height: 28px
+        //width: 65%
+      &__info
+        &_time
+          font-size: 18px
+          line-height: 28px
+          width: 90%
+          &_description
+            width: 85%
+        &_price
+          font-size: 18px
+          line-height: 28px
 
 
 @media screen and (min-width: 1280px)
@@ -496,79 +256,71 @@ li
       max-width: 1240px
     &__footer
       max-width: 1280px
-
-  .header
-    margin: 40px 0 48px 0
-    height: 180px
-    &__header-top
-      height: 72px
-    &__header-right
-      &__buttons
-        max-width: 258px
-      &__user-img
-        margin-right: 16px
-      &__user-number
-        display: block
-        color: #212121
-        @include fontBold
-        font-weight: 600
-        &:hover
-          color: $colorFontSite
   .ticket
-    &__title
+    padding-top: 48px
+    margin-bottom: 128px
+    &_title
+      margin-bottom: 32px
       font-size: 32px
       line-height: 48px
     &__description
       margin-bottom: 48px
-    &__purchase__details__footer
-      margin-bottom: 64px
-  .footer
-    &__legal-information
-      min-width: 288px
-    &__departments
-      flex-direction: row
-      &__group
-        flex-direction: column
-        max-height: 220px
-        width: calc(100% / 12 * 4 - 32px)
-        &_3
-          padding-top: 0
-
-
+      &_text
+        font-size: 18px
+        line-height: 32px
+    &__purchase__details
+      &_title
+        font-size: 24px
+        line-height: 36px
+      &_text
+        font-size: 18px
+        line-height: 32px
+      &__footer
+        margin-top: 24px
+        margin-bottom: 64px
+        &_price
+          &_title
+            font-size: 18px
+            line-height: 32px
+          &_total-price
+            font-size: 28px
+            line-height: 42px
+    &__tariffs
+      &_title
+        font-size: 32px
+        line-height: 48px
+      &__period
+        &:not(:last-child)
+          margin-bottom: 48px
+        &_h4
+          font-size: 24px
+          line-height: 36px
+        &_text
+          font-size: 18px
+          line-height: 32px
+        &__info
+          &_time
+            font-size: 20px
+            line-height: 30px
+          &_price
+            font-size: 20px
+            line-height: 30px
 
 @media screen and (min-width: 1920px)
   .container
     max-width: 1920px
     padding: 0 340px
-    &__footer
-      max-width: 1980px
-  .header
-    height: 222px
-    &__header-top
-      height: 81.34px
-    &__header-right
-      &__buttons
-        max-width: 350px
-      &__user-img
-        background-image: url(../../src/images/user-avatar.svg)
-      &__user-number
-        display: none
-      &__user-name
-        display: block
-        color: #212121
-        @include fontBold
-        font-weight: 600
-        &:hover
-          color: $colorFontSite
-      &__log-out
-        margin-left: 24px
-        padding-left: 24px
-  .ticket
-    &__title
+    &__ticket
+      max-width: 922px
+      margin: 0
+      padding: 0
+      display: flex
+      flex-direction: column
+      align-items: flex-start
 
-  .footer
-    &__legal-information
-      min-width: 498px
-    &__departments
-      &__group
-        max-height: 200px
+  .ticket
+    max-width: 1240px
+    padding-top: 48px
+    margin: 0 auto 128px auto
+    &__description_group
+      width: 54%

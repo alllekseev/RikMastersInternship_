@@ -1,0 +1,190 @@
+@import "general-styles"
+.footer
+  background-color: $colorBackground
+  &__legal-information
+    //width: 86%
+    margin: 32px 0 24px 0
+    //display: flex
+    //flex-direction: column
+    //justify-content: space-between
+    //align-items: flex-start
+    &_copyright
+      //width: 75%
+      //max-width: 301px
+      padding-bottom: 16px
+      @include fontBold
+      font-weight: 500
+    &_title
+      padding-bottom: 16px
+      @include fontParagraph
+      color: $colorFontSite
+      font-weight: 600
+    &_text
+      @include fontParagraph
+      &_link
+        color: $colorFontSite
+  &__departments
+    //width: 100%
+    //display: flex
+    //flex-direction: column
+    //flex-wrap: wrap
+    //margin: 0 -16px
+    &__group
+      //min-height: 212px
+      //display: flex
+      //flex-direction: column
+      //justify-content: space-between
+      //align-items: flex-start
+      //width: calc(100% / 12 * 6 - 32px)
+      //margin: 0 16px
+      &_main
+        //display: flex
+      &_1
+        //margin-right: 33px
+        //width: 45%
+        & .footer__departments_department_last
+
+          //margin-top: 64px
+      &_2
+        //display: block
+        //width: 36%
+      &_3
+        //min-height: 100%
+        //padding-top: 24px
+        //width: 97%
+        //display: flex
+        //flex-direction: row
+        //justify-content: space-between
+    &_department
+      //margin-right: 32px
+      &_title
+        display: block
+        padding-bottom: 4px
+        @include fontParagraph
+        color: #212121
+        text-transform: uppercase
+        font-weight: 600
+        &:hover
+          color: $colorFontSite
+      &_last
+        margin-top: 24px
+      &_description
+        @include fontParagraph
+        //width: 143px
+      &_3
+        //margin-right: 32px
+    &__apps
+      //padding-right: 40px
+      &_app
+        display: block
+        background-position: center
+        background-repeat: no-repeat
+      &_app-store
+        width: 117.92px
+        height: 38.25px
+        margin-bottom: 16px
+        background-image: url(../../src/images/app-store.svg)
+      &_google-play
+        width: 135px
+        height: 40px
+        background-image: url(../../src/images/google-play.svg)
+  &__logo
+    height: 48px
+    background-image: url(../../src/images/footer-logo.svg)
+    background-repeat: no-repeat
+    background-position: 100% 0
+    margin-top: 26px
+    margin-bottom: 32px
+
+@media screen and (min-width: 640px)
+  .footer
+    &__departments
+      flex-direction: row
+      &__group
+        //min-height: 192px
+        //width: calc(100% / 12 * 4 - 32px)
+        &_main
+          margin-right: 32px
+        &_1
+          width: 52%
+        &_2
+          width: 72%
+        &_3
+          width: auto
+          padding-top: 0
+          flex-direction: column
+          align-items: flex-end
+
+@media screen and (min-width: 880px)
+  .footer
+    position: relative
+    &__legal-information
+      width: 38%
+      //width: 288px
+      margin: 48px 32px 48px 0
+      justify-content: normal
+      &_copyright
+        width: 90%
+    &__departments
+      //max-width: 416px
+      margin-top: 48px
+      flex-direction: column
+      &_department
+        width: 159px
+        margin-right: 32px
+        &_title
+          min-width: 64px
+        &_description
+          max-width: 224px
+        &_last
+          width: 224px
+          margin-right: 0
+      &__group
+        //width: 100%
+        flex-direction: row
+        justify-content: space-between
+        &_main
+          flex-direction: column
+          margin-right: 0
+        //max-width: 416px
+        //flex-direction: row
+        //justify-content: space-between
+        //width: calc(100% / 12 * 12 - 32px)
+        //min-height: 64px
+        &_1
+          width: 100%
+          margin-bottom: 32px
+          margin-right: 0
+        &_2
+          width: 100%
+        &_3
+          padding-top: 32px
+          flex-direction: row
+          align-items: flex-start
+      &__apps
+        width: 224px
+    &__logo
+      position: absolute
+      width: 100%
+      margin: 0 -28px
+      bottom: 42px
+      right: 28px
+@media screen and (min-width: 1280px)
+  .footer
+    &__legal-information
+      min-width: 288px
+    &__departments
+      flex-direction: row
+      &__group
+        flex-direction: column
+        max-height: 220px
+        width: calc(100% / 12 * 4 - 32px)
+        &_3
+          padding-top: 0
+@media screen and (min-width: 1920px)
+  .footer
+    &__legal-information
+      min-width: 498px
+    &__departments
+      &__group
+        max-height: 200px
