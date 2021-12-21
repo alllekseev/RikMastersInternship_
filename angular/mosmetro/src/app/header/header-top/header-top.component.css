@@ -1,0 +1,27 @@
+.header-top {
+  height: 100%;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 880px) {
+  .header-top {
+    height: 64px;
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-top {
+    height: 100%;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header-top {
+    margin-bottom: 96px;
+  }
+}
+
+/*# sourceMappingURL=header-top.component.css.map */

@@ -1,0 +1,188 @@
+.container {
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.container__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 880px;
+}
+.container__tariffs {
+  max-width: 880px;
+}
+
+.tariffs {
+  margin-bottom: 64px;
+  padding-top: 32px;
+}
+.tariffs_title {
+  margin-bottom: 66px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.tariffs__ticket:not(:last-child) {
+  margin-bottom: 32px;
+}
+.tariffs__ticket_img {
+  margin-bottom: 16px;
+}
+.tariffs__ticket_position {
+  margin: 0 auto;
+  width: 320px;
+}
+.tariffs__ticket_position:not(:last-child) {
+  margin-bottom: 32px;
+}
+.tariffs__ticket__description_title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.tariffs__ticket__description_text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: start;
+}
+.tariffs__ticket_button {
+  flex-shrink: 0;
+  margin-top: 92px;
+}
+.tariffs__ticket_button_text {
+  height: 52px;
+  width: 100%;
+  background-color: #D62828;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding: 0 48px;
+  }
+
+  .tariffs_title {
+    margin-bottom: 67px;
+  }
+  .tariffs__ticket_position {
+    width: 100%;
+    text-align: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .tariffs__ticket_position_top {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .tariffs__ticket_img {
+    height: 100px;
+    width: 160px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+  .tariffs__ticket_button {
+    margin-top: 0;
+    height: 52px;
+    width: 160px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .container {
+    padding: 0 72px;
+  }
+  .container__footer {
+    display: flex;
+  }
+
+  .tariffs {
+    margin-bottom: 72px;
+    padding-top: 40px;
+  }
+  .tariffs_title {
+    margin-bottom: 70px;
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .tariffs__ticket_position {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .tariffs__ticket_position_top {
+    padding-right: 32px;
+  }
+  .tariffs__ticket__description_title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .tariffs__ticket__description_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 176px;
+  }
+  .container__header, .container__tariffs, .container__footer {
+    max-width: 1280px;
+  }
+
+  .tariffs_title {
+    margin-bottom: 92px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .tariffs__ticket_position {
+    align-items: center;
+  }
+  .tariffs__ticket_img {
+    height: 131px;
+    width: 208px;
+  }
+  .tariffs__ticket__description_title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .tariffs__ticket__description_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .tariffs__ticket_button {
+    width: 128px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+    padding: 0 340px;
+  }
+  .container__footer {
+    max-width: 1980px;
+  }
+
+  .tariffs {
+    margin-bottom: 127px;
+  }
+  .tariffs__ticket__description {
+    max-width: 710px;
+  }
+  .tariffs__ticket_img {
+    height: 180px;
+    width: 286px;
+  }
+  .tariffs__ticket_button {
+    width: 180px;
+  }
+  .tariffs__ticket_position {
+    align-items: flex-end;
+  }
+}
+
+/*# sourceMappingURL=tariffs.component.css.map */

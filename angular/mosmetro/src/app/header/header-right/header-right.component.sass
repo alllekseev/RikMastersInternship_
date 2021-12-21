@@ -1,0 +1,79 @@
+@import "../../../utils.sass"
+
+.header-right
+  &__buttons
+    display: none
+  &_burger
+    //background: none
+    width: 32px
+    height: 24px
+    border: none
+    background-color: rgba(0, 0, 255, 0)
+    background-image: url("../../../assets/images/header-burger.svg")
+    background-repeat: no-repeat
+    background-position: center
+    &:hover
+      color: #0000ff
+      background-image: url("../../../assets/images/Group_26.svg")
+
+
+@media screen and (min-width: 880px)
+  .header-right
+    &__buttons
+      max-width: 118px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__user-img
+      background-image: url('../../../assets/images/user-img.svg')
+      background-position: center
+      background-repeat: no-repeat
+      width: 48px
+      height: 48px
+      border: none
+      border-radius: 50%
+    &__user-number
+      display: none
+    &__user-name
+      display: none
+    &__log-out
+      margin-left: 8px
+      @include fontBold
+      color: $colorFontSite
+      background: none
+      border: none
+      border-left: 1px solid #E5E5E5
+      padding-left: 8px
+      font-weight: 600
+    &_burger
+      display: none
+@media screen and (min-width: 1280px)
+  .header-right
+    &__buttons
+      max-width: 258px
+    &__user-img
+      margin-right: 16px
+    &__user-number
+      display: block
+      color: #212121
+      @include fontBold
+      font-weight: bold
+      &:hover
+        color: $colorFontSite
+@media screen and (min-width: 1920px)
+  .header-right
+    &__buttons
+      max-width: 350px
+    &__user-img
+      background-image: url('../../../assets/images/user-avatar.svg')
+    &__user-number
+      display: none
+    &__user-name
+      display: block
+      color: #212121
+      @include fontBold
+      &:hover
+        color: $colorFontSite
+    &__log-out
+      margin-left: 24px
+      padding-left: 24px

@@ -1,0 +1,379 @@
+.container {
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.container__header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket {
+  padding-top: 32px;
+  margin-bottom: 24px;
+}
+.ticket_title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.ticket__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.ticket__description_img {
+  margin-bottom: 25px;
+}
+.ticket__description_text {
+  font-size: 14px;
+  line-height: 24px;
+}
+.ticket__description_text:not(:last-child) {
+  margin-bottom: 8px;
+}
+.ticket__purchase__details_title {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.ticket__purchase__details_text {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.ticket__purchase__details__forms_ticket-type_title {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  padding-left: 12px;
+}
+.ticket__purchase__details__forms_ticket-type_button {
+  height: 44px;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+.ticket__purchase__details__forms_ticket-type_button_choice {
+  font-size: 14px;
+  line-height: 20px;
+}
+.ticket__purchase__details__forms_ticket-type_button_icon {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #777777;
+  display: block;
+}
+.ticket__purchase__details__footer {
+  margin-top: 16px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket__purchase__details__footer_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ticket__purchase__details__footer_price_title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.ticket__purchase__details__footer_price_total-price {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.ticket__purchase__details__footer_button {
+  height: 52px;
+  min-width: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #D62828;
+  font-weight: 600;
+}
+.ticket__tariffs_title {
+  margin-bottom: 32px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.ticket__tariffs_h2 {
+  margin-bottom: 32px;
+}
+.ticket__tariffs__period:not(:last-child) {
+  margin-bottom: 32px;
+}
+.ticket__tariffs__period:last-child {
+  margin-bottom: 64px;
+}
+.ticket__tariffs__period_h4 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.ticket__tariffs__period_text {
+  font-size: 14px;
+  line-height: 24px;
+}
+.ticket__tariffs__period__info {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.ticket__tariffs__period__info:not(:last-child) {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F5F5FE;
+}
+.ticket__tariffs__period__info_time {
+  width: 80%;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Futura PT", sans-serif;
+  font-weight: bold;
+  font-weight: 600;
+}
+.ticket__tariffs__period__info_time_description {
+  width: 90%;
+  padding-top: 4px;
+  padding-right: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777777;
+}
+.ticket__tariffs__period__info_price {
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Futura PT", sans-serif;
+  font-weight: bold;
+  font-weight: 800;
+  color: #D62828;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding: 0 48px;
+  }
+  .container__tariffs {
+    max-width: 100%;
+  }
+
+  .ticket__description {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .ticket__description_img {
+    min-width: 160px;
+    min-height: 100px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+  .ticket__purchase__details__forms {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ticket__purchase__details__forms_ticket-type {
+    width: 100%;
+  }
+  .ticket__purchase__details__forms_ticket-type:not(:last-child) {
+    margin-right: 32px;
+  }
+  .ticket__purchase__details__footer_button {
+    width: 160px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .container {
+    padding: 0 72px;
+  }
+  .container__ticket {
+    max-width: 880px;
+  }
+  .container__footer {
+    display: flex;
+    max-width: 880px;
+  }
+
+  .ticket {
+    padding-top: 40px;
+    margin-bottom: 72px;
+  }
+  .ticket_title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .ticket__description {
+    flex-direction: row;
+  }
+  .ticket__description_img {
+    min-width: 224px;
+    min-height: 141px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+  .ticket__description_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .ticket__description_text:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .ticket__purchase__details {
+    padding-right: 128px;
+  }
+  .ticket__purchase__details_title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .ticket__purchase__details__forms {
+    height: 100%;
+    margin: 0 -16px;
+    flex-direction: row;
+  }
+  .ticket__purchase__details__forms_ticket-type {
+    width: calc(50% - 32px);
+    margin: 0 16px;
+  }
+  .ticket__purchase__details__footer_button {
+    width: 160px;
+  }
+  .ticket__tariffs__period_h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .ticket__tariffs__period_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .ticket__tariffs__period__info_time {
+    font-size: 18px;
+    line-height: 28px;
+    width: 90%;
+  }
+  .ticket__tariffs__period__info_time_description {
+    width: 85%;
+  }
+  .ticket__tariffs__period__info_price {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 176px;
+  }
+  .container__ticket, .container__tariffs {
+    max-width: 1280px;
+  }
+  .container__footer {
+    max-width: 1280px;
+  }
+
+  .ticket {
+    padding-top: 48px;
+    margin-bottom: 128px;
+  }
+  .ticket_title {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .ticket__description {
+    margin-bottom: 48px;
+  }
+  .ticket__description_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .ticket__purchase__details_title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .ticket__purchase__details_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .ticket__purchase__details__footer {
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+  .ticket__purchase__details__footer_price_title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .ticket__purchase__details__footer_price_total-price {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .ticket__tariffs_title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .ticket__tariffs__period:not(:last-child) {
+    margin-bottom: 48px;
+  }
+  .ticket__tariffs__period_h4 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .ticket__tariffs__period_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .ticket__tariffs__period__info_time {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .ticket__tariffs__period__info_price {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+    padding: 0 340px;
+  }
+  .container__ticket {
+    max-width: 922px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ticket {
+    max-width: 1240px;
+    padding-top: 48px;
+    margin: 0 auto 128px auto;
+  }
+  .ticket__description_group {
+    width: 54%;
+  }
+}
+
+/*# sourceMappingURL=tariff-details.component.css.map */

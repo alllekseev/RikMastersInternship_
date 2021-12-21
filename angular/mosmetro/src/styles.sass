@@ -1,0 +1,49 @@
+@font-face
+  font-family: 'Futura PT'
+  font-weight: bold
+  src: url('/assets/fonts/futura_pt_bold.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT Book'
+  src: url('/assets/fonts/futura_pt_book.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT'
+  font-weight: 600
+  src: url('/assets/fonts/futura_pt_demi.ttf') format('truetype')
+@font-face
+  font-family: 'Futura PT'
+  font-weight: 500
+  src: url('/assets/fonts/futura_pt_medium.ttf') format('truetype')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Futura PT Book', sans-serif
+
+html,
+body
+  height: 100%
+
+a
+  text-decoration: none
+li
+  list-style-type: none
+
+.container
+  margin: 0 auto
+  padding: 0 28px
+
+@media screen and (min-width: 640px)
+  .container
+    padding: 0 48px
+@media screen and (min-width: 880px)
+  .container
+    padding: 0 72px
+@media screen and (min-width: 1280px)
+  .container
+    padding: 0 176px
+@media screen and (min-width: 1920px)
+  .container
+    //min-width: 1920px
+    padding: 0 340px
+

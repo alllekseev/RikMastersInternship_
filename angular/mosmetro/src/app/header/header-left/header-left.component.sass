@@ -1,0 +1,50 @@
+.header-left
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  &_img
+    height: 56px
+  &_title
+    display: none
+
+@media screen and (min-width: 640px)
+  .header-left
+    //width: 100%
+    //max-width: 303px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_img
+      margin-right: 25px
+    &_title
+      display: flex
+      max-width: 160px
+      font-size: 16px
+      line-height: 24px
+      font-weight: bold
+@media screen and (min-width: 880px)
+  .header-left
+    margin-right: 32px
+    flex-shrink: 0
+    &_img
+      height: 64px
+      margin-right: 56px
+    &_title
+      font-size: 18px
+      line-height: 28px
+@media screen and (min-width: 1280px)
+  .header-left
+    &_title
+      font-size: 20px
+      line-height: 30px
+    &_img
+      height: 72px
+      margin-right: 33px
+@media screen and (min-width: 1920px)
+  .header-left
+    margin-right: 0
+    &_img
+      margin-right: 40px
+      height: 81px
+    &_title
+      margin-right: 138px

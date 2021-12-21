@@ -1,0 +1,45 @@
+@import "../../../utils.sass"
+
+.header-middle
+  display: none
+
+@media screen and (min-width: 880px)
+  .header-middle
+    margin-right: 46px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    flex-shrink: 0
+    &__contact-info
+      height: 64px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+  .contact-info
+    &__number
+      @include fontBold
+      color: $colorFontSite
+      font-weight: bold
+    &__provider
+      font-size: 12px
+      line-height: 18px
+      font-weight: 500
+      color: $colorFontLightgray
+      &_num
+        font-size: 12px
+        color: $colorFontSite
+        font-weight: 600
+    &__link
+      font-size: 12px
+      line-height: 18px
+      color: $colorFontSite
+      &:hover
+        text-decoration: $colorFontSite
+@media screen and (min-width: 1280px)
+  .header-middle
+    margin-right: 45px
+@media screen and (min-width: 1920px)
+  .header-middle
+    margin-right: 143px

@@ -1,0 +1,29 @@
+.container__header
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  max-width: 880px
+
+.header
+  height: 132px
+  margin: 24px 0 0 0
+
+@media screen and (min-width: 640px)
+  .header
+    height: 132px
+
+@media screen and (min-width: 880px)
+  .header
+    margin-top: 32px
+    height: 156px
+
+@media screen and (min-width: 1280px)
+  .container__header
+    max-width: 1280px
+  .header
+    margin-top: 40px
+    height: auto
+
+@media screen and (min-width: 1920px)
+  .container__header
+    max-width: 1920px

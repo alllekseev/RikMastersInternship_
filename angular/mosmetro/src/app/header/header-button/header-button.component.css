@@ -1,0 +1,19 @@
+.header-button {
+  padding: 0 16px 0 17px;
+  width: 155px;
+  height: 44px;
+  background: rgba(214, 40, 40, 0.16);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.header-button_text {
+  padding-left: 13px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #D62828;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=header-button.component.css.map */

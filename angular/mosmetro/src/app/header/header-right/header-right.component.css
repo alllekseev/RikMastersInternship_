@@ -1,0 +1,104 @@
+.header-right__buttons {
+  display: none;
+}
+.header-right_burger {
+  width: 32px;
+  height: 24px;
+  border: none;
+  background-color: rgba(0, 0, 255, 0);
+  background-image: url("../../../assets/images/header-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header-right_burger:hover {
+  color: #0000ff;
+  background-image: url("../../../assets/images/Group_26.svg");
+}
+
+@media screen and (min-width: 880px) {
+  .header-right__buttons {
+    max-width: 118px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-right__user-img {
+    background-image: url("../../../assets/images/user-img.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+  }
+  .header-right__user-number {
+    display: none;
+  }
+  .header-right__user-name {
+    display: none;
+  }
+  .header-right__log-out {
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Futura PT", sans-serif;
+    font-weight: bold;
+    color: #D62828;
+    background: none;
+    border: none;
+    border-left: 1px solid #E5E5E5;
+    padding-left: 8px;
+    font-weight: 600;
+  }
+  .header-right_burger {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-right__buttons {
+    max-width: 258px;
+  }
+  .header-right__user-img {
+    margin-right: 16px;
+  }
+  .header-right__user-number {
+    display: block;
+    color: #212121;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Futura PT", sans-serif;
+    font-weight: bold;
+    font-weight: bold;
+  }
+  .header-right__user-number:hover {
+    color: #D62828;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header-right__buttons {
+    max-width: 350px;
+  }
+  .header-right__user-img {
+    background-image: url("../../../assets/images/user-avatar.svg");
+  }
+  .header-right__user-number {
+    display: none;
+  }
+  .header-right__user-name {
+    display: block;
+    color: #212121;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Futura PT", sans-serif;
+    font-weight: bold;
+  }
+  .header-right__user-name:hover {
+    color: #D62828;
+  }
+  .header-right__log-out {
+    margin-left: 24px;
+    padding-left: 24px;
+  }
+}
+
+/*# sourceMappingURL=header-right.component.css.map */
