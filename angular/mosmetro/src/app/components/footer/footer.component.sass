@@ -1,0 +1,152 @@
+@import "../../../utils"
+
+.footer
+  background-color: $colorBackground
+  padding: 32px 0
+  &__legal-information
+    margin-bottom: 24px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    &_copyright
+      max-width: 301px
+      padding-bottom: 16px
+      @include fontBold
+      font-weight: 600
+    &_title
+      padding-bottom: 16px
+      @include fontParagraph
+      color: $colorFontSite
+    &_text
+      @include fontParagraph
+      &_link
+        color: $colorFontSite
+  &__departments
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -16px
+    &__group
+      min-height: 212px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      width: calc(100% / 12 * 6 - 32px)
+      margin: 0 16px
+      &_3
+        min-height: 100%
+        padding-top: 24px
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &_department
+      &_title
+        margin-bottom: 4px
+        @include fontParagraph
+        color: #212121
+        text-transform: uppercase
+        font-weight: 800
+        &:hover
+          color: $colorFontSite
+      &_describtion
+        @include fontParagraph
+    &__apps
+      &_app
+        display: block
+        background-position: center
+        background-repeat: no-repeat
+      &_app-store
+        width: 117.92px
+        height: 38.25px
+        margin-bottom: 16px
+        background-image: url('../../../assets/images/app-store.svg')
+      &_google-play
+        width: 135px
+        height: 40px
+        background-image: url("../../../assets/images/google-play.svg")
+  &__logo
+    height: 48px
+    background-image: url('../../../assets/images/footer-logo.svg')
+    background-repeat: no-repeat
+    background-position: 100% 0
+    margin-top: 26px
+    //padding-bottom: 32px
+
+@media screen and (min-width: 640px)
+  .footer
+    &__departments
+      &__group
+        min-height: 192px
+        width: calc(100% / 12 * 4 - 32px)
+        &_3
+          padding-top: 0
+          flex-direction: column
+
+@media screen and (min-width: 880px)
+  .container__footer
+    display: flex
+    max-width: 880px
+
+  .footer
+    position: relative
+    padding: 48px 0
+    &__legal-information
+      width: 288px
+      //margin-top: 48px
+      margin-right: 32px
+      justify-content: normal
+    &__departments
+      //max-width: 416px
+      margin-top: 48px
+      &_department
+        &_title
+          min-width: 64px
+        &_description
+          max-width: 224px
+      &__group
+        //max-width: 416px
+        flex-direction: row
+        justify-content: space-between
+        width: calc(100% / 12 * 12 - 32px)
+        min-height: 64px
+        &_3
+          padding-top: 32px
+      &__apps
+        width: 224px
+    &__logo
+      position: absolute
+      width: 100%
+      margin: 0 -28px
+      //bottom: 42px
+      right: 28px
+
+@media screen and (min-width: 1280px)
+  .container
+    &__footer
+      min-width: 1280px
+  .footer
+    padding: 64px 0
+    &__legal-information
+      min-width: 288px
+    &__departments
+      flex-direction: row
+      &__group
+        flex-direction: column
+        max-height: 220px
+        width: calc(100% / 12 * 4 - 32px)
+        &_3
+          padding-top: 0
+
+@media screen and (min-width: 1920px)
+  .container__footer
+    max-width: 1980px
+    padding: 0 340px
+  .footer
+    &__legal-information
+      min-width: 498px
+    &__departments
+      &__group
+        max-height: 200px

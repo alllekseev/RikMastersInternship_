@@ -1,0 +1,49 @@
+<main class="tariffs">
+  <div class="container container__tariffs">
+    <h2 class="tariffs_title">Тарифы и продукты</h2>
+    <div class="tariffs__tickets">
+      <div class="tariffs__ticket">
+        <div class="tariffs__ticket_position">
+          <div class="tariffs__ticket_position_top">
+            <img src="{{ ticket.img_url }}" class="tariffs__ticket_img" alt="Тариф единый">
+            <div class="tariffs__ticket__description">
+              <h4 class="tariffs__ticket__description_title">{{ ticket.name }}</h4>
+              <p class="tariffs__ticket__description_text">{{ ticket.description }}</p>
+            </div>
+          </div>
+          <div class="tariffs__ticket_button">
+            <button class="tariffs__ticket_button_text" routerLink="/tariff-details">Купить</button>
+          </div>
+        </div>
+      </div>
+<!--      <div class="tariffs__ticket">-->
+<!--        <div class="tariffs__ticket_position">-->
+<!--          <div class="tariffs__ticket_position_top">-->
+<!--            <img src="../../../../assets/images/tariff-ticket2.svg" class="tariffs__ticket_img" alt="Тариф единый">-->
+<!--            <div class="tariffs__ticket__description">-->
+<!--              <h4 class="tariffs__ticket__description_title">Проездной ТАТ</h4>-->
+<!--              <p class="tariffs__ticket__description_text">Проездной билет ТАТ (троллейбус, автобус, трамвай) предназначен для поездок на всех видах наземного общественного транспорта. Тариф удобен для тех, кто редко спускается в метрополитен или вообще им не пользуется, а передвигается по городу исключительно на наземном общественном транспорте.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="tariffs__ticket_button">-->
+<!--            <button class="tariffs__ticket_button_text">Купить</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="tariffs__ticket">-->
+<!--        <div class="tariffs__ticket_position">-->
+<!--          <div class="tariffs__ticket_position_top">-->
+<!--            <img src="../../../../assets/images/tariff-ticket3.svg" class="tariffs__ticket_img" alt="Тариф единый">-->
+<!--            <div class="tariffs__ticket__description">-->
+<!--              <h4 class="tariffs__ticket__description_title">Билет «90 минут»</h4>-->
+<!--              <p class="tariffs__ticket__description_text">Билет «90 минут» позволяет совершить 1 поездку в метро / монорельсе и неограниченное число пересадок на наземном транспорте в течение 90 минут.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="tariffs__ticket_button">-->
+<!--            <button class="tariffs__ticket_button_text">Купить</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </div>
+</main>
