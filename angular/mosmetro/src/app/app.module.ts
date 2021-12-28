@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import {HttpClientJsonpModule} from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,8 @@ import { NewServiceService } from "./services/new-service.service";
 import { FilterComponent } from './components/main/history/filter/filter.component';
 import { MainHistoryComponent } from './components/main/history/main-history/main-history.component';
 import { PaginationComponent } from './components/main/history/pagination/pagination.component';
+import {TicketsService} from "./services/tickets.service";
+import {TariffsService} from "./services/tariffs.service";
 
 
 // @ts-ignore
@@ -42,9 +45,10 @@ import { PaginationComponent } from './components/main/history/pagination/pagina
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     HeaderModule,
   ],
-  providers: [NewServiceService],
+  providers: [NewServiceService, TicketsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

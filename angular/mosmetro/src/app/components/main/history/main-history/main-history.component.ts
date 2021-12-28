@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NewServiceService} from "../../../../services/new-service.service";
-// import {History, Carriers} from "../history.component";
+import {History} from "../../../../services/new-service.service";
+
 
 @Component({
   selector: 'app-main-history',
@@ -10,7 +11,7 @@ import {NewServiceService} from "../../../../services/new-service.service";
 
 export class MainHistoryComponent implements OnInit {
 
-  private loading: boolean = true
+  history: History[] = [];
 
 
   // @Input() history: History[] = [];
@@ -21,11 +22,11 @@ export class MainHistoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.newService.fetchHistory().subscribe(() => {
-    //   this.loading = false
-    //   // this.history = data;
-    // })
-    // console.log(this.newService.history.length)
+    this.newService.fetchHistory().subscribe(data => {
+      this.history = data
+      console.log(history)
+    })
+    // console.log(this.newService.history)
   }
 
 }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Filter, Status, FilterService} from "../../../../services/filter.service";
+import {NgModule} from "@angular/core";
+import {filter, toArray} from "rxjs";
+import {global} from "@angular/compiler/src/util";
 
 @Component({
   selector: 'app-filter',
@@ -7,17 +11,60 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
+  // @ts-ignore
+  filter: Filter[] = [];
+  status: Status[] = [];
+
   date = true;
   card = true;
 
   toggleDate: string = "Свернуть";
   toggleCard: string = "Свернуть";
-  icon: any = "../../../assets/images/angle-up.svg";
-  iconCard: any = "../../../assets/images/angle-up.svg";
+  icon: string = "../../../assets/images/angle-up.svg";
+  iconCard: string = "../../../assets/images/angle-up.svg";
 
-  constructor() { }
+  // someTitle!: string = this.filter;
+  // image: string = 'http://127.0.0.1:8188/storage/uploads/'; // добавить картинки в API
+
+  constructor(private filterService: FilterService) {}
+
+
+  // changeTitle(elem) {
+  //   if(elem === 'await') {
+  //     this.someTitle
+  //   }
+  // }
 
   ngOnInit(): void {
+    this.filterService.getCarriers().subscribe(data => {
+      data.forEach(item => {
+        this.filter.push(new Filter(item['id'], item['name'], item['number'], item['status']));
+        // @ts-ignore
+        this.status.push(new Status(item.status['id'], item.status['name'], item.status['title']))
+      })
+
+      // this.filter = data;
+      console.log(this.filter)
+
+      // @ts-ignore
+      // if(this.status.include('ready')) {
+      //   console.log(1)
+      // }
+
+
+
+    })
+
+    // console.log(this.someTitle);
+
+    // this.changeTitle()
+
+
+
+    // @ts-ignore
+    // setTimeout(this.toConsole, 5000)
+
+
   }
 
   toShowDate() {
@@ -46,5 +93,9 @@ export class FilterComponent implements OnInit {
 
     return day !== 0 && day !== 6;
   }
+
+  // @ts-ignore
+
+
 
 }

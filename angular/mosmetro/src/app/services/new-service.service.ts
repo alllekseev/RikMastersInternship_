@@ -1,19 +1,32 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, pipe, Subscription, tap, map} from "rxjs";
+import {Observable, map} from "rxjs";
 
-export interface History {
-  id: number;
-  place_name: string;
-  price: string;
-  created_at: string;
-  // carriers: Carriers[];
+export class HistoryPage {
+  constructor(
+    public data: History[],
+  ) {
+  }
 }
 
-export interface Carriers {
-  id: number;
-  name: string;
-  number: string;
+export class History {
+  constructor(
+    public id: number,
+    public place_name: string,
+    public price: string,
+    public created_at: string,
+    public carriers: Carriers[],
+  ) {
+  }
+}
+
+export class Carriers {
+  constructor (
+    public id: number,
+    public name: string,
+    public number: string,
+  ) {
+  }
 }
 
 @Injectable({
@@ -26,13 +39,14 @@ export class NewServiceService {
 
   // data = this.http.get('http://127.0.0.1:8188/api/v1/history');
 
-  constructor(private http: HttpClient) {
-    // console.log(this.data)
+  constructor(private httpClient: HttpClient) {}
+
+  fetchHistory(): Observable<History[]> {
+
+    return this.httpClient.get<HistoryPage>('http://127.0.0.1:8188/api/v1/history')
+      .pipe(
+        map(history =>  this.history = history.data)
+      )
   }
 
-  // fetchHistory(): Observable<History[]> {
-  //   return this.http.get('http://127.0.0.1:8188/api/v1/history')
-  //     .pipe(tap({} => () ))
-  //     // .pipe(tap(history =>  this.history.jso))
-  // }
 }
