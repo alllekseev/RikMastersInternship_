@@ -23,10 +23,13 @@
       &_link
         color: $colorFontSite
   &__departments
+    font-family: Futura PT,sans-serif
+    color: #212121
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    overflow: hidden
     width: 100%
-    display: flex
-    flex-wrap: wrap
-    margin: 0 -16px
     &__group
       min-height: 212px
       display: flex
@@ -88,6 +91,7 @@
 @media screen and (min-width: 880px)
   .container__footer
     display: flex
+    flex-wrap: wrap
     max-width: 880px
 
   .footer
@@ -99,8 +103,8 @@
       margin-right: 32px
       justify-content: normal
     &__departments
-      //max-width: 416px
-      margin-top: 48px
+      width: 416px
+      //margin-top: 48px
       &_department
         &_title
           min-width: 64px
@@ -132,6 +136,7 @@
     &__legal-information
       min-width: 288px
     &__departments
+      width: 608px
       flex-direction: row
       &__group
         flex-direction: column
@@ -148,5 +153,6 @@
     &__legal-information
       min-width: 498px
     &__departments
+      width: 710px
       &__group
         max-height: 200px

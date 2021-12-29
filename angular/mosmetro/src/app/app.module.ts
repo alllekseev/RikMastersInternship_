@@ -23,6 +23,7 @@ import { MainHistoryComponent } from './components/main/history/main-history/mai
 import { PaginationComponent } from './components/main/history/pagination/pagination.component';
 import {TicketsService} from "./services/tickets.service";
 import {TariffsService} from "./services/tariffs.service";
+import { FooterLinksComponent } from './components/footer/footer-links/footer-links.component';
 
 
 // @ts-ignore
@@ -38,6 +39,7 @@ import {TariffsService} from "./services/tariffs.service";
     FilterComponent,
     MainHistoryComponent,
     PaginationComponent,
+    FooterLinksComponent,
   ],
   imports: [
     BrowserModule,

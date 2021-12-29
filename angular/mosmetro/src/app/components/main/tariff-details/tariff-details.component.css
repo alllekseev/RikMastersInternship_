@@ -64,6 +64,10 @@
   border: 1px solid #CCCCCC;
   border-radius: 4px;
 }
+.ticket__purchase__details__forms_ticket-type_button_select {
+  width: 100%;
+  border: none;
+}
 .ticket__purchase__details__forms_ticket-type_button_choice {
   font-size: 14px;
   line-height: 20px;
