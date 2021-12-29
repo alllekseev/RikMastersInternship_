@@ -18,7 +18,6 @@ export class FilterService {
         map(response => this.filter = response.data)
       )
   }
-
 }
 
 export class FilterPage {

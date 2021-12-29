@@ -30,6 +30,11 @@
     height: 48px;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3ms all;
+  }
+  .header-right__user-img:active {
+    border: 24px solid #d6282829;
   }
   .header-right__user-number {
     display: none;

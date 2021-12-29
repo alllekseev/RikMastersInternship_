@@ -6,7 +6,6 @@ import { TariffDetailsComponent } from "./components/main/tariff-details/tariff-
 import { HistoryComponent } from "./components/main/history/history.component";
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '', component: TariffsComponent },
   { path: 'tariff-details', component: TariffDetailsComponent },
   { path: 'history', component: HistoryComponent },

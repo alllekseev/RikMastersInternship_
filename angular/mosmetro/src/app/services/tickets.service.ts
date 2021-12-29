@@ -1,7 +1,6 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
-import {Observable, map, tap} from "rxjs";
-// import {Ticket} from "../components/main/tariffs/tariffs.component";
+import {Observable, tap} from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -10,11 +9,8 @@ import {Observable, map, tap} from "rxjs";
 export class TicketsService {
 
   ticket: Ticket[] = [];
-  // ticket!: { data: Ticket[] };
 
-  constructor(private http:HttpClient) {
-    // console.log(this.ticket)
-  }
+  constructor(private http:HttpClient) { }
 
 
   getTickets(): Observable<Ticket[]> {
@@ -23,11 +19,6 @@ export class TicketsService {
       // @ts-ignore
       .pipe(tap(response => this.ticket = response))
   }
-
-  showTicket() {
-    console.log(this.ticket)
-  }
-
 }
 
 export class Ticket {

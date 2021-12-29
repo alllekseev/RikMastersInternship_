@@ -112,6 +112,11 @@
   line-height: 24px;
   background-color: #D62828;
   font-weight: 600;
+  transition: 0.1s all;
+}
+.ticket__purchase__details__footer_button:active {
+  background-color: #d6282829;
+  color: #D62828;
 }
 .ticket__tariffs_title {
   margin-bottom: 32px;

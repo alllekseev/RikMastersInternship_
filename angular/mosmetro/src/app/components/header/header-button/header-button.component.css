@@ -7,6 +7,12 @@
   border: none;
   display: flex;
   align-items: center;
+  transition: 0.1s all;
+}
+.header-button:active {
+  color: #F5F5FE;
+  background: none;
+  border: 1px solid #D62828FF;
 }
 .header-button_text {
   padding-left: 13px;

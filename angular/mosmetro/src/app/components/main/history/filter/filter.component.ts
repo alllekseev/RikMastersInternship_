@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Filter, Status, FilterService} from "../../../../services/filter.service";
-import {NgModule} from "@angular/core";
-import {filter, toArray} from "rxjs";
-import {global} from "@angular/compiler/src/util";
+import {Filter, Status, FilterService, FilterPage} from "../../../../services/filter.service";
 
 @Component({
   selector: 'app-filter',
@@ -12,9 +9,11 @@ import {global} from "@angular/compiler/src/util";
 export class FilterComponent implements OnInit {
 
   // @ts-ignore
+  filterPage: FilterPage[] = [];
   filter: Filter[] = [];
   status: Status[] = [];
 
+  // toggles
   date = true;
   card = true;
 
@@ -23,48 +22,25 @@ export class FilterComponent implements OnInit {
   icon: string = "../../../assets/images/angle-up.svg";
   iconCard: string = "../../../assets/images/angle-up.svg";
 
-  // someTitle!: string = this.filter;
-  // image: string = 'http://127.0.0.1:8188/storage/uploads/'; // добавить картинки в API
+  someTitle!: string;
 
   constructor(private filterService: FilterService) {}
 
-
-  // changeTitle(elem) {
-  //   if(elem === 'await') {
-  //     this.someTitle
-  //   }
-  // }
-
   ngOnInit(): void {
     this.filterService.getCarriers().subscribe(data => {
+      // @ts-ignore
       data.forEach(item => {
+        // @ts-ignore
         this.filter.push(new Filter(item['id'], item['name'], item['number'], item['status']));
         // @ts-ignore
         this.status.push(new Status(item.status['id'], item.status['name'], item.status['title']))
+        console.log(this.filter)
+
+        for(let status of this.status) {
+          this.someTitle = status.title;
+        }
       })
-
-      // this.filter = data;
-      console.log(this.filter)
-
-      // @ts-ignore
-      // if(this.status.include('ready')) {
-      //   console.log(1)
-      // }
-
-
-
     })
-
-    // console.log(this.someTitle);
-
-    // this.changeTitle()
-
-
-
-    // @ts-ignore
-    // setTimeout(this.toConsole, 5000)
-
-
   }
 
   toShowDate() {
@@ -93,9 +69,4 @@ export class FilterComponent implements OnInit {
 
     return day !== 0 && day !== 6;
   }
-
-  // @ts-ignore
-
-
-
 }

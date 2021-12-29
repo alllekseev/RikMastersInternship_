@@ -1,4 +1,4 @@
-<div class="filter">
+<div class="filter" xmlns="http://www.w3.org/1999/html">
   <h2 class="filter_h2">Фильтр</h2>
   <div class="filter__date">
     <div class="filter__date__title filter__title">
@@ -24,50 +24,30 @@
         <img src="{{iconCard}}" alt="angle-up">
       </button>
     </div>
-    <div class="filter__owner__carts">
-<!--      <div class="filter__owner__carts__cart">-->
-<!--        <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-1" name="cart-check" value="checked">-->
-<!--        <label for="filterRadio-1" class="filter__owner__carts__cart_content">-->
-<!--          <img src="../../../../../assets/images/filter-cart-blue.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">-->
-<!--          <div class="filter__owner__carts__cart__data">-->
-<!--            <p class="filter__owner__carts__cart__data_name">Моя тройка</p>-->
-<!--            <p class="filter__owner__carts__cart__data_number">1234 456 355</p>-->
-<!--          </div>-->
-<!--        </label>-->
-<!--      </div>-->
-<!--      <div class="filter__owner__carts__cart">-->
-<!--        <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-2" name="cart-check" value="checked">-->
-<!--        <label for="filterRadio-2" class="filter__owner__carts__cart_content">-->
-<!--          <img src="../../../../../assets/images/filter-cart-orange.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">-->
-<!--          <div class="filter__owner__carts__cart__data">-->
-<!--            <p class="filter__owner__carts__cart__data_name">Студенческая</p>-->
-<!--            <div class="filter__owner__carts__cart__data_number_elements">-->
-<!--              <p class="filter__owner__carts__cart__data_number">1234 456 355</p>-->
-<!--              <p class="filter__owner__carts__cart__data_number filter__owner__carts__cart__data_date">08/21</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </label>-->
-<!--      </div>-->
-        <div class="filter__owner__carts__cart" *ngFor="let filter of filter; let i = index">
-          <ng-container>
-            <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-3" name="cart-check" value="checked" disabled="disabled">
-            <label for="filterRadio-3" class="filter__owner__carts__cart_content ">
+    <div class="filter__owner__carts" *ngIf="card">
+      <div class="filter__owner__carts__cart" *ngFor="let filter of filter; let i = index; ">
+        <ng-template [ngIf]="i == 0 || i == 1" [ngIfElse]="second" >
+          <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-{{i}}" name="cart-check" value="checked">
+          <label for="filterRadio-{{i}}" class="filter__owner__carts__cart_content">
+            <img src="../../../../../assets/images/filter-cart-blue.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">
+            <div class="filter__owner__carts__cart__data">
+              <p class="filter__owner__carts__cart__data_name">{{filter.name}}</p>
+              <p class="filter__owner__carts__cart__data_number">{{filter.number}}</p>
+            </div>
+          </label>
+        </ng-template>
+        <ng-template #second>
+          <input type="radio"  class="filter__owner__carts__cart_radio" id="filterRadio-3" name="cart-check" value="checked" disabled="disabled">
+          <label for="filterRadio-3" class="filter__owner__carts__cart_content filter__owner__carts__cart_content_disabled">
               <img src="../../../../../assets/images/filter-cart-purple.svg" alt="filter-cart-img" class="filter__owner__carts__cart_img">
-                <div class="filter__owner__carts__cart__data" >
-                <p class="filter__owner__carts__cart__data_name">{{filter.name}}</p>
-<!--                <p class="filter__owner__carts__cart__data_number">{{status.title}}</p>-->
+              <div class="filter__owner__carts__cart__data">
+                  <p class="filter__owner__carts__cart__data_name">{{filter.name}}</p>
+                  <p class="filter__owner__carts__cart__data_number">{{someTitle}}</p>
               </div>
-            </label>
-          </ng-container>
+          </label>
+      </ng-template>
       </div>
     </div>
   </div>
   <button class="filter__button-save">Сохранить</button>
-  <!--      User name: <input type="text" [(ngModel)]="userName">-->
-  <!--      <button (click)="search()">Search</button>-->
-  <!--      <div *ngIf="response">-->
-  <!--        <img src="{{response.avatar_url}}" alt="">-->
-  <!--        <p>Name: {{response.login}}</p>-->
-  <!--        <p>Repo: {{response.public_repos}}</p>-->
-  <!--      </div>-->
 </div>

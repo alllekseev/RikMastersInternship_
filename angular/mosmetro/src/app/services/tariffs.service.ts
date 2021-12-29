@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, tap, map} from "rxjs";
+import {Observable, map} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -48,18 +48,3 @@ export class Offers {
   ) {
   }
 }
-
-// export interface Tariff {
-//    id: number,
-//    name: string,
-//    title: string,
-//    description: string,
-//    offers: Offers[]
-// }
-//
-// export interface Offers {
-//   id: number,
-//   name: string,
-//   description: null,
-//   price: string
-// }
