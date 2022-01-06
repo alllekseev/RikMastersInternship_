@@ -5,40 +5,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import {HttpClientJsonpModule} from "@angular/common/http";
 
-
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { HeaderModule } from "./components/header/header.module";
+import { HeaderModule } from "./components/content/header/header.module";
+
 import { FooterComponent } from './components/footer/footer.component';
-import { TariffsComponent } from './components/main/tariffs/tariffs.component';
-import { MainComponent } from './components/main/main.component';
+import { MainComponent } from './components/content/main/main.component';
 import { ContentComponent } from './components/content/content.component';
-import { TariffDetailsComponent } from './components/main/tariff-details/tariff-details.component';
-import { HistoryComponent } from './components/main/history/history.component';
-import { NewServiceService } from "./services/new-service.service";
-import { FilterComponent } from './components/main/history/filter/filter.component';
-import { MainHistoryComponent } from './components/main/history/main-history/main-history.component';
-import { PaginationComponent } from './components/main/history/pagination/pagination.component';
-import {TicketsService} from "./services/tickets.service";
-import {TariffsService} from "./services/tariffs.service";
 import { FooterLinksComponent } from './components/footer/footer-links/footer-links.component';
+import {ContentModule} from "./components/content/content.module";
 
-
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    TariffsComponent,
     MainComponent,
     ContentComponent,
-    TariffDetailsComponent,
-    HistoryComponent,
-    FilterComponent,
-    MainHistoryComponent,
-    PaginationComponent,
     FooterLinksComponent,
   ],
   imports: [
@@ -49,8 +33,8 @@ import { FooterLinksComponent } from './components/footer/footer-links/footer-li
     HttpClientModule,
     HttpClientJsonpModule,
     HeaderModule,
+    ContentModule
   ],
-  providers: [NewServiceService, TicketsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

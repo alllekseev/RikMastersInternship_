@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TariffsComponent } from "./components/main/tariffs/tariffs.component";
-import { TariffDetailsComponent } from "./components/main/tariff-details/tariff-details.component";
-import { HistoryComponent } from "./components/main/history/history.component";
+import { TariffsComponent } from "./components/content/main/tariffs-page/tariffs.component";
+import { TariffDetailsComponent } from "./components/content/main/tariff-details-page/tariff-details.component";
+import { JourneysComponent } from "./components/content/main/journeys-page/journeys.component";
 
 const routes: Routes = [
   { path: '', component: TariffsComponent },
-  { path: 'tariff-details', component: TariffDetailsComponent },
-  { path: 'history', component: HistoryComponent },
+  { path: 'app-tariff-details-page', component: TariffDetailsComponent },
+  { path: 'history', component: JourneysComponent },
 ];
 
 @NgModule({

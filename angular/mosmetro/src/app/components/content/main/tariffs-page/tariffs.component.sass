@@ -1,6 +1,4 @@
-@import "../../styles/general-styles"
-@import "../../styles/header"
-@import "../../styles/footer"
+@import "../../../../../utils"
 
 .container
   margin: 0 auto
@@ -13,14 +11,6 @@
     max-width: 880px
   &__tariffs
     max-width: 880px
-.header
-  height: auto
-  margin: 24px 0 0 0
-  &__header-top
-    margin-bottom: 0
-  &__header-button
-    display: none
-
 .tariffs
   margin-bottom: 64px
   padding-top: 32px
@@ -35,6 +25,9 @@
     &_img
       margin-bottom: 16px
     &_position
+      margin: 0 auto
+      width: 320px
+      //text-align: center
       &:not(:last-child)
         margin-bottom: 32px
     &__description
@@ -46,18 +39,24 @@
       &_text
         font-size: 14px
         line-height: 24px
+        text-align: start
     &_button
       flex-shrink: 0
       margin-top: 92px
       &_text
         height: 52px
         width: 100%
-        background-color: $colorFontSite
         border: none
         border-radius: 4px
         @include fontParagraph
+        background-color: $colorFontSite
         color: #FFFFFF
         font-weight: 600
+        transition: .1s all
+        &:active
+          background-color: #d6282829
+          color: #D62828
+
 
 @media screen and (min-width: 640px)
   .container
@@ -73,6 +72,8 @@
       //flex-direction: column
       //height: 100%
       &_position
+        width: 100%
+        text-align: unset
         display: flex
         flex-direction: column
         align-items: flex-end
@@ -88,7 +89,6 @@
         margin-top: 0
         height: 52px
         width: 160px
-
 @media screen and (min-width: 880px)
   .container
     padding: 0 72px
@@ -162,3 +162,4 @@
         width: 180px
       &_position
         align-items: flex-end
+

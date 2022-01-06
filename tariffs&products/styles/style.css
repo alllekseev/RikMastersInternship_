@@ -234,7 +234,7 @@ li {
     color: #D62828;
     background: none;
     border: none;
-    border-left: 1px solid #D62828;
+    border-left: 1px solid #E5E5E5;
     padding-left: 8px;
     font-weight: 600;
   }
@@ -773,6 +773,10 @@ li {
   }
   .tariffs__ticket__description {
     max-width: 710px;
+  }
+  .tariffs__ticket_img {
+    height: 180px;
+    width: 286px;
   }
   .tariffs__ticket_button {
     width: 180px;

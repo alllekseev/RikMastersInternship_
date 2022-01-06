@@ -1,0 +1,56 @@
+.main-history__item-list {
+  cursor: pointer;
+}
+.main-history__item-list__pages {
+  padding: 24px 0 64px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-history__item-list__pages_button {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  background: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #777777;
+}
+.main-history__item-list__pages_button:hover {
+  color: #D62828;
+}
+.main-history__item-list__pages_page {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+.main-history__item-list__pages_page:hover {
+  background-color: #F5F5F5;
+}
+.main-history__item-list__pages_page_selected {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 640px) {
+  .main-history__item-list {
+    min-width: 192px;
+    max-width: 328px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .main-history__item-list__pages {
+    padding: 32px 0 72px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-history__item-list__pages {
+    padding: 48px 0 128px 0;
+  }
+}
+
+/*# sourceMappingURL=journeys-pagination.component.css.map */

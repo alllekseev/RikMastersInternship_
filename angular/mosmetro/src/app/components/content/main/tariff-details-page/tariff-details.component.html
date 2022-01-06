@@ -1,0 +1,61 @@
+<main class="ticket">
+  <div class="container container__ticket">
+    <h2 class="ticket_title">Билет «Единый»</h2>
+    <div class="ticket__description">
+      <img src="../../../../../assets/images/tariff-ticket1-big.svg" class="ticket__description_img" alt="Тариф единый">
+      <div class="ticket__description_group">
+        <p class="ticket__description_text">Билет «Единый» позволяет совершать поездки на метро, монорельсе, автобусе, троллейбусе или трамвае. Одна поездка по билету равна одному проходу на любом виде транспорта. Билет действует на всей территории Москвы, включая Зону Б.</p>
+        <p class="ticket__description_text">Срок действия билета «Единый» на 1–2 поездки — 5 дней, включая день продажи. Срок действия билета «Единый» на 60 поездок — 45 дней со дня продажи.</p>
+      </div>
+    </div>
+    <div class="ticket__purchase">
+      <div class="ticket__purchase__details">
+        <h3 class="ticket__purchase__details_title">Купить билет</h3>
+        <p class="ticket__purchase__details_text">Вы можете купить билет и реализовать ее на вашей карте «Тройка»</p>
+        <div class="ticket__purchase__details__forms">
+          <div class="ticket__purchase__details__forms_ticket-type">
+            <p class="ticket__purchase__details__forms_ticket-type_title">Тип билета</p>
+            <div class="ticket__purchase__details__forms_ticket-type_button">
+              <select class="ticket__purchase__details__forms_ticket-type_button_select">
+                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Не выбрано</option>
+                <option value="1" class="ticket__purchase__details__forms_ticket-type_button_choice">One</option>
+                <option value="2" class="ticket__purchase__details__forms_ticket-type_button_choice">Two</option>
+                <option value="3" class="ticket__purchase__details__forms_ticket-type_button_choice">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="ticket__purchase__details__forms_ticket-type">
+            <p class="ticket__purchase__details__forms_ticket-type_title">Карта пополнения</p>
+            <div class="ticket__purchase__details__forms_ticket-type_button">
+              <select class="ticket__purchase__details__forms_ticket-type_button_select">
+                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Не выбрано</option>
+                <option class="ticket__purchase__details__forms_ticket-type_button_choice">One</option>
+                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Two</option>
+                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ticket__purchase__details__footer">
+          <div class="ticket__purchase__details__footer_price">
+            <p class="ticket__purchase__details__footer_price_title">К оплате</p>
+            <p class="ticket__purchase__details__footer_price_total-price">0 &#x20bd;</p>
+          </div>
+          <button class="ticket__purchase__details__footer_button">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="ticket__tariffs">
+      <h2 class="ticket__tariffs_title">Тарифы</h2>
+      <div class="ticket__tariffs__period" *ngFor="let tariff of tariffs; let i = index; ">
+          <h4 class="ticket__tariffs__period_h4">{{tariff.title}}</h4>
+          <p class="ticket__tariffs__period_text">{{tariff.description}}</p>
+          <p class="ticket__tariffs__period_text">Билеты на 60 поездок действуют 45 дней с момента продажи (включая день продажи) и реализуются только на карте «Тройка».</p>
+          <div class="ticket__tariffs__period__info" *ngFor="let offer of tariff.offers">
+            <p class="ticket__tariffs__period__info_time">{{offer.name}}</p>
+            <p class="ticket__tariffs__period__info_price">{{offer.price}} &#x20bd;</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
