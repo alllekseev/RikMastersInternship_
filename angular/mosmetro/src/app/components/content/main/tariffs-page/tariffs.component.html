@@ -5,7 +5,7 @@
       <div class="tariffs__ticket">
         <div class="tariffs__ticket_position" *ngFor="let ticket of tickets; let i = index">
           <div class="tariffs__ticket_position_top">
-            <img src="{{imgURL}}{{ticket.image_url}}" class="tariffs__ticket_img" alt="Тариф единый">
+            <img src="http://127.0.0.1:8188/storage/uploads/tickets/{{ticket.image_url}}" class="tariffs__ticket_img" alt="Тариф единый">
             <div class="tariffs__ticket__description">
               <h4 class="tariffs__ticket__description_title">{{ ticket.name }}</h4>
               <p class="tariffs__ticket__description_text">{{ ticket.description }}</p>

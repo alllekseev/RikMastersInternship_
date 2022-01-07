@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Offers, Tariff, TariffDetailsService} from "./service/tariff-details.service";
+import {TariffDetailsService} from "./service/tariff-details.service";
+
+import {Offers, Tariff} from "../main.module";
 
 @Component({
   selector: 'app-tariff-details-page',

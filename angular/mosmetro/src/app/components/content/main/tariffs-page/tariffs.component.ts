@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
-import {TariffsService, Ticket} from "./service/tariffs.service";
+import {TariffsService} from "./service/tariffs.service";
+
+import {Ticket} from "../main.module";
 
 
 @Component({
@@ -11,7 +13,6 @@ import {TariffsService, Ticket} from "./service/tariffs.service";
 export class TariffsComponent implements OnInit {
 
   tickets: Ticket[] = [];
-  imgURL: string = 'http://127.0.0.1:8188/storage/uploads/tickets/';
 
   constructor(private ticketsService: TariffsService) {
     // получить id routing => занести в переменную => использовать в верстке

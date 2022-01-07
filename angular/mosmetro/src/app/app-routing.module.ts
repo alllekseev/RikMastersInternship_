@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 
 import { TariffsComponent } from "./components/content/main/tariffs-page/tariffs.component";
 import { TariffDetailsComponent } from "./components/content/main/tariff-details-page/tariff-details.component";

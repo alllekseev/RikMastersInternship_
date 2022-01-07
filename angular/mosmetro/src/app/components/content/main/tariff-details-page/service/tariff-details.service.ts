@@ -1,6 +1,8 @@
-import {Inject, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable, map} from "rxjs";
+
+import {Offers, Tariff, TariffPage} from "../../main.module";
 
 @Injectable({
   providedIn: 'root'
@@ -19,34 +21,5 @@ export class TariffDetailsService {
       .pipe(
         map(response => this.tariff = response.data),
       )
-  }
-}
-
-@Inject('data')
-
-export class TariffPage {
-  constructor(
-    //@ts-ignore
-    public data: Tariff[],
-  ) {
-  }
-}
-export class Tariff {
-  constructor(
-    public id: number,
-    public name: string,
-    public title: string,
-    public description: string,
-    public offers: Offers[],
-  ) {
-  }
-}
-export class Offers {
-  constructor(
-    public id: number,
-    public name: string,
-    public description: null,
-    public price: string
-  ) {
   }
 }

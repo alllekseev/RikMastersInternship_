@@ -4,15 +4,14 @@ import { CommonModule } from '@angular/common';
 import {JourneysFiltrationComponent} from "./journeys-filtration/journeys-filtration.component";
 import {JourneysPaginationComponent} from "./journeys-pagination/journeys-pagination.component";
 import {JourneysHistoryComponent} from "./journeys-history/journeys-history.component";
-
-import {FiltrationService} from "./journeys-filtration/service/filtration.service";
-import {JourneyHistoryService} from "./journeys-history/service/journey-history.service";
+import { CarriersComponent } from './journeys-history/carriers/carriers.component';
 
 @NgModule({
   declarations: [
     JourneysFiltrationComponent,
     JourneysHistoryComponent,
     JourneysPaginationComponent,
+    CarriersComponent,
   ],
   exports: [
     JourneysFiltrationComponent,
@@ -22,7 +21,6 @@ import {JourneyHistoryService} from "./journeys-history/service/journey-history.
   imports: [
     CommonModule,
   ],
-  // providers: [FiltrationService, JourneyHistoryService]
 })
 
 export class JourneysModule { }
@@ -65,7 +63,7 @@ export class History {
     public place_name: string,
     public price: string,
     public created_at: string,
-    public carriers: Carriers[],
+    public carrier: Carriers[],
   ) {
   }
 }

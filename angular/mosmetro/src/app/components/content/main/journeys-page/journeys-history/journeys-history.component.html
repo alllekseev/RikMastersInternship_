@@ -7,16 +7,17 @@
   <div class="main-history__days__day" id="history__day">
     <p class="main-history__days__day_title">Сегодня</p>
     <div class="main-history__carts">
-      <div class="main-history__cart" *ngFor="let history of history; let i = index;">
+      <div class="main-history__cart" *ngFor="let history of history;">
         <div class="main-history__cart_station">
           <span class="main-history__cart_title">{{ history.place_name }}</span>
           <span class="main-history__cart_price">{{ history.price }}&#8381;</span>
         </div>
         <p class="main-history__cart_date">{{ history.created_at }}</p> <!--  -->
-        <span>
-          <p class="main-history__cart_cart-name" >{{history.place_name}}</p>
-          <p class="main-history__cart_cart-number">{{history.id}}</p>
-        </span>
+          <app-carriers></app-carriers>
+<!--        <span>-->
+<!--          <p class="main-history__cart_cart-name" >{{history.place_name}}</p>-->
+<!--          <p class="main-history__cart_cart-number">{{history.id}}</p>-->
+<!--        </span>-->
       </div>
     </div>
   </div>

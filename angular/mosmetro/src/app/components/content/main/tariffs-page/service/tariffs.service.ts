@@ -1,6 +1,8 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable, map} from "rxjs";
+
+import {TariffsPage, Ticket} from "../../main.module";
 
 @Injectable({
   providedIn: "root",
@@ -17,23 +19,3 @@ export class TariffsService {
       .pipe(map(response => this.ticket = response.data))
   }
 }
-
-@Inject('data')
-
-export class TariffsPage {
-  constructor(
-    public data: Ticket[],
-  ) {
-  }
-}
-export class Ticket {
-  constructor(
-    public id: number,
-    public image_url: string,
-    public name: string,
-    public description: string
-  ) {
-  }
-}
-
-
