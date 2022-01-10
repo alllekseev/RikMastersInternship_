@@ -4,7 +4,8 @@ import {Observable, map} from "rxjs";
 
 import {TariffsPage, Ticket} from "../../main.module";
 
-import {methods, urlAPI} from "../../../../../global";
+import {methods} from "../../../../../global";
+import {environment} from "../../../../../../environments/environment";
 
 @Injectable({
   providedIn: "root",
@@ -17,7 +18,7 @@ export class TariffsService {
   constructor(private http:HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
-    return this.http.get<TariffsPage>(urlAPI + methods.tickets)
+    return this.http.get<TariffsPage>(environment.urlAPI + methods.tickets)
       .pipe(map(response => this.ticket = response.data))
   }
 }

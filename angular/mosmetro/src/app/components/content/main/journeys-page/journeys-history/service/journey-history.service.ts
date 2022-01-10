@@ -3,7 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {Observable, map} from "rxjs";
 
 import {Carriers, History, HistoryPage} from "../../journeys.module";
-import {methods, urlAPI} from "../../../../../../global";
+import {methods} from "../../../../../../global";
+import {environment} from "../../../../../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class JourneyHistoryService {
   constructor(private httpClient: HttpClient) {}
 
   fetchHistory(): Observable<History[]> {
-    return this.httpClient.get<HistoryPage>(urlAPI + methods.history)
+    return this.httpClient.get<HistoryPage>(environment.urlAPI + methods.history)
       .pipe(
         map(history =>  this.history = history.data)
       )

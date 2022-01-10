@@ -4,4 +4,14 @@
   z-index: 99;
 }
 
-/*# sourceMappingURL=loaderServer.component.css.map */
+.spinner {
+  top: 50%;
+  left: 50%;
+}
+.spinner circle {
+  width: 20px;
+  height: 20px;
+  color: accent;
+}
+
+/*# sourceMappingURL=loader.component.css.map */

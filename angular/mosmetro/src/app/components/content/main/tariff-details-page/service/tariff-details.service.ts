@@ -3,7 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {Observable, map} from "rxjs";
 
 import {Offers, Tariff, TariffPage} from "../../main.module";
-import {methods, urlAPI} from "../../../../../global";
+import {methods} from "../../../../../global";
+import {environment} from "../../../../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class TariffDetailsService {
 
   getTariffs(): Observable<Tariff[]> {
     // @ts-ignore
-    return this.httpClient.get<TariffPage>(urlAPI + methods.tariffs)
+    return this.httpClient.get<TariffPage>(environment.urlAPI + methods.tariffs)
       .pipe(
         map(response => this.tariff = response.data),
       )
