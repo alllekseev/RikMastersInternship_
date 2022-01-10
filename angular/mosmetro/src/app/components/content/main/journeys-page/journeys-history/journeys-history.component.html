@@ -3,22 +3,34 @@
   <p class="main-history__filter-button_p">Фильтр</p>
   <i class="fas fa-angle-down angle"></i> <!-- С помощью JS будет меняться иконка -->
 </button>
+<app-loader></app-loader>
 <div class="main-history__days" id="history__days">
   <div class="main-history__days__day" id="history__day">
     <p class="main-history__days__day_title">Сегодня</p>
     <div class="main-history__carts">
-      <div class="main-history__cart" *ngFor="let history of history;">
-        <div class="main-history__cart_station">
-          <span class="main-history__cart_title">{{ history.place_name }}</span>
-          <span class="main-history__cart_price">{{ history.price }}&#8381;</span>
+      <ng-container *ngFor="let history of history;">
+        <div class="main-history__cart">
+          <div class="main-history__cart_station">
+            <span class="main-history__cart_title">{{ history.place_name }}</span>
+            <span class="main-history__cart_price">{{ history.price }}&#8381;</span>
+          </div>
+          <p class="main-history__cart_date">{{ history.created_at }}</p>
+          <p class="main-history__cart_cart-name" >{{history.id}}</p>
+          <p class="main-history__cart_cart-number">{{history.id}}</p>
         </div>
-        <p class="main-history__cart_date">{{ history.created_at }}</p> <!--  -->
-          <app-carriers></app-carriers>
-<!--        <span>-->
-<!--          <p class="main-history__cart_cart-name" >{{history.place_name}}</p>-->
-<!--          <p class="main-history__cart_cart-number">{{history.id}}</p>-->
-<!--        </span>-->
-      </div>
+      </ng-container>
     </div>
   </div>
 </div>
+
+<!--<div class="main-history__cart" *ngFor="let history of history;">-->
+<!--  <div class="main-history__cart_station">-->
+<!--    <span class="main-history__cart_title">{{ history.place_name }}</span>-->
+<!--    <span class="main-history__cart_price">{{ history.price }}&#8381;</span>-->
+<!--  </div>-->
+<!--  <p class="main-history__cart_date">{{ history.created_at }}</p>-->
+<!--  <span *ngFor="let carrier of history.carrier">-->
+<!--          <p class="main-history__cart_cart-name" >{{carrier.name}}</p>-->
+<!--          <p class="main-history__cart_cart-number">{{carrier.number}}</p>-->
+<!--        </span>-->
+<!--</div>-->

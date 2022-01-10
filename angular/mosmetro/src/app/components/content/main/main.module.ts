@@ -20,7 +20,7 @@ import {RouterModule} from "@angular/router";
   imports: [
     CommonModule,
     JourneysModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     JourneysComponent,
@@ -34,6 +34,8 @@ import {RouterModule} from "@angular/router";
 })
 
 export class MainModule { }
+
+// Занести описание моделий в Services?
 
 // Tariffs
 export class TariffsPage {

@@ -4,7 +4,6 @@ import {TariffsService} from "./service/tariffs.service";
 
 import {Ticket} from "../main.module";
 
-
 @Component({
   selector: 'app-tariffs-page',
   templateUrl: './tariffs.component.html',
@@ -14,7 +13,9 @@ export class TariffsComponent implements OnInit {
 
   tickets: Ticket[] = [];
 
-  constructor(private ticketsService: TariffsService) {
+  constructor(
+    private ticketsService: TariffsService) {
+
     // получить id routing => занести в переменную => использовать в верстке
   }
 

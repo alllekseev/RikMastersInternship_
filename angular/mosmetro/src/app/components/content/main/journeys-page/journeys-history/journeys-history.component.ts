@@ -12,22 +12,21 @@ import {JourneyHistoryService} from "./service/journey-history.service";
 
 export class JourneysHistoryComponent implements OnInit {
 
-  // carriers: Carriers[] = [];
-  history: History[] = [];
+  carrier!: Carriers[];
+  history!: History[];
 
 
   constructor(public newService: JourneyHistoryService) { }
 
   ngOnInit() {
-        this.newService.fetchHistory().subscribe(data => {
+    this.newService.fetchHistory().subscribe(data => {
       this.history = data
       console.log(this.history)
     })
 
-    // this.newService.fetchCarriers().subscribe(data => {
-    //   this.carriers = data
-    //   console.log(this.carriers)
-    // })
-
+    this.newService.fetchCards().subscribe(card => {
+      this.carrier = card
+      console.log(this.carrier)
+    })
   }
 }

@@ -24,6 +24,7 @@
         <img src="{{iconCard}}" alt="angle-up">
       </button>
     </div>
+    <app-loader></app-loader>
     <div class="filter__owner__carts" *ngIf="card">
       <div class="filter__owner__carts__cart" *ngFor="let filter of filter; let i = index; ">
         <ng-template [ngIf]="i == 0 || i == 1" [ngIfElse]="second" >

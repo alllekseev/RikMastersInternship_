@@ -47,6 +47,7 @@
     </div>
     <div class="ticket__tariffs">
       <h2 class="ticket__tariffs_title">Тарифы</h2>
+      <app-loader></app-loader>
       <div class="ticket__tariffs__period" *ngFor="let tariff of tariffs; let i = index; ">
           <h4 class="ticket__tariffs__period_h4">{{tariff.title}}</h4>
           <p class="ticket__tariffs__period_text">{{tariff.description}}</p>

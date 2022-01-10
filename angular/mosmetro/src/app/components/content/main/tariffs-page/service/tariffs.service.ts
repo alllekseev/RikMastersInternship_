@@ -4,6 +4,8 @@ import {Observable, map} from "rxjs";
 
 import {TariffsPage, Ticket} from "../../main.module";
 
+import {methods, urlAPI} from "../../../../../global";
+
 @Injectable({
   providedIn: "root",
 })
@@ -15,7 +17,7 @@ export class TariffsService {
   constructor(private http:HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
-    return this.http.get<TariffsPage>('http://127.0.0.1:8188/api/v1/tickets')
+    return this.http.get<TariffsPage>(urlAPI + methods.tickets)
       .pipe(map(response => this.ticket = response.data))
   }
 }

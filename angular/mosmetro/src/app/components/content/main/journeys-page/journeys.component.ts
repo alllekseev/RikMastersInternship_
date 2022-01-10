@@ -10,6 +10,5 @@ export class JourneysComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // return MainComponent;
   }
 }

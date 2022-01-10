@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable, map} from "rxjs";
 
 import {Carriers, History, HistoryPage} from "../../journeys.module";
+import {methods, urlAPI} from "../../../../../../global";
 
 @Injectable({
   providedIn: 'root'
@@ -10,28 +11,23 @@ import {Carriers, History, HistoryPage} from "../../journeys.module";
 
 export class JourneyHistoryService {
 
-  public carriers: Carriers[] = [];
-  public history: History [] = [];
+  history: History [] = [];
+  carrier: Carriers[] = [];
+
 
   constructor(private httpClient: HttpClient) {}
 
-  fetchCarriers(): Observable<Carriers[]> {
-    return this.httpClient.get<History>('http://127.0.0.1:8188/api/v1/history')
-      .pipe(
-        map(carrier => this.carriers = carrier.carrier)
-      )
-  }
-
   fetchHistory(): Observable<History[]> {
-    return this.httpClient.get<HistoryPage>('http://127.0.0.1:8188/api/v1/history')
+    return this.httpClient.get<HistoryPage>(urlAPI + methods.history)
       .pipe(
         map(history =>  this.history = history.data)
       )
   }
 
-  toLog() {
-    console.log(this.carriers)
+  fetchCards(): Observable<Carriers[]> {
+    return this.httpClient.get<History>('http://127.0.0.1:8188/' + methods.history)
+      .pipe(
+        map(card => this.carrier = card.carrier)
+      )
   }
-
-
 }

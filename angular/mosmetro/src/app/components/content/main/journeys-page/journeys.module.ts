@@ -4,26 +4,32 @@ import { CommonModule } from '@angular/common';
 import {JourneysFiltrationComponent} from "./journeys-filtration/journeys-filtration.component";
 import {JourneysPaginationComponent} from "./journeys-pagination/journeys-pagination.component";
 import {JourneysHistoryComponent} from "./journeys-history/journeys-history.component";
-import { CarriersComponent } from './journeys-history/carriers/carriers.component';
+import {LoaderComponent} from "../loader/loader.component";
+
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
     JourneysFiltrationComponent,
     JourneysHistoryComponent,
     JourneysPaginationComponent,
-    CarriersComponent,
+    LoaderComponent
   ],
   exports: [
     JourneysFiltrationComponent,
     JourneysHistoryComponent,
-    JourneysPaginationComponent
+    JourneysPaginationComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
+    MatProgressSpinnerModule,
   ],
 })
 
 export class JourneysModule { }
+
+//Занести описание моделей классов в Services?
 
 //Filtration
 export class FilterPage {

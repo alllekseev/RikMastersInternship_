@@ -7,7 +7,7 @@ import {FiltrationService} from "./service/filtration.service";
 @Component({
   selector: "app-journeys-filtration",
   templateUrl: './journeys-filtration.component.html',
-  styleUrls: ['./journeys-filtration.component.sass']
+  styleUrls: ['./journeys-filtration.component.sass'],
 })
 
 export class JourneysFiltrationComponent implements OnInit {
