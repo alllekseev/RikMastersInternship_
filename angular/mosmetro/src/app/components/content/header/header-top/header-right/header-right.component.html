@@ -5,5 +5,9 @@
     <a href="#" class="header-right__user-name" routerLink="history">Иванов Иван Иванович</a>
     <button class="header-right__log-out">Выйти</button>
   </div>
-  <button class="header-right_burger"></button>
+  <button mat-button [matMenuTriggerFor]="beforeMenu" class="header-right_burger">
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="history">Личный кабинет</button>
+  </mat-menu>
 </div>

@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatMenuTrigger} from "@angular/material/menu";
 
 @Component({
   selector: 'app-journeys',
@@ -6,6 +7,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./journeys.component.sass']
 })
 export class JourneysComponent implements OnInit {
+
+  @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
+
+  someMethod() {
+    this.trigger.openMenu();
+  }
 
   constructor() { }
 

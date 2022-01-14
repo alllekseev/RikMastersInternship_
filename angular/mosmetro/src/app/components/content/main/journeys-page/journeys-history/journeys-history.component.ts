@@ -12,6 +12,10 @@ import {JourneyHistoryService} from "./service/journey-history.service";
 
 export class JourneysHistoryComponent implements OnInit {
 
+  public page!: number
+
+  public collectionSize!: number;
+
   carrier!: Carriers[];
   history!: History[];
 
@@ -19,14 +23,20 @@ export class JourneysHistoryComponent implements OnInit {
   constructor(public newService: JourneyHistoryService) { }
 
   ngOnInit() {
+    this.page = 1;
     this.newService.fetchHistory().subscribe(data => {
       this.history = data
-      console.log(this.history)
+      this.collectionSize = this.history.length;
+      // console.log(this.history)
     })
 
     this.newService.fetchCards().subscribe(card => {
       this.carrier = card
       console.log(this.carrier)
     })
+  }
+
+  onPageChange(pageNumber: any) {
+    console.log("page.changed:" + pageNumber)
   }
 }

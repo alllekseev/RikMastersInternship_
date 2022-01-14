@@ -18,7 +18,7 @@ export class TariffsService {
   constructor(private http:HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
-    return this.http.get<TariffsPage>(environment.urlAPI + methods.tickets)
+    return this.http.get<TariffsPage>(environment.hostAPI + methods.tickets)
       .pipe(map(response => this.ticket = response.data))
   }
 }

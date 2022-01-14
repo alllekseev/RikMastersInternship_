@@ -1,11 +1,20 @@
-<div class="main-history__item-list">
-  <ul class="main-history__item-list__pages">
-    <li><button class="main-history__item-list__pages_button"><img src="../../../../../../assets/images/angle-left.svg" alt="angle-left"></button></li>
-    <li class="main-history__item-list__pages_page main-history__item-list__pages_page_selected">1</li> <!-- selected сделать id -->
-    <li class="main-history__item-list__pages_page">2</li>
-    <li class="main-history__item-list__pages_page">3</li>
-    <li class="main-history__item-list__pages_page">4</li>
-    <li class="main-history__item-list__pages_page">5</li>
-    <li><button class="main-history__item-list__pages_button"><img src="../../../../../../assets/images/angle-right.svg" alt="angle-right"></button></li>
-  </ul>
-</div>
+<!--<div class="main-history__item-list">-->
+<!--  <ul class="main-history__item-list__pages">-->
+<!--    <li><button class="main-history__item-list__pages_button left-btn"><img src="../../../../../../assets/images/angle-left.svg" alt="angle-left"></button></li>-->
+<!--    <div *ngFor="let page of pagesArr">-->
+<!--      <li class="main-history__item-list__pages_page">{{page}}</li>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <li class="main-history__item-list__pages_page main-history__item-list__pages_page_selected">1</li> &lt;!&ndash; selected сделать id &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <li class="main-history__item-list__pages_page">2</li>&ndash;&gt;-->
+<!--&lt;!&ndash;    <li class="main-history__item-list__pages_page">3</li>&ndash;&gt;-->
+<!--&lt;!&ndash;    <li class="main-history__item-list__pages_page">4</li>&ndash;&gt;-->
+<!--&lt;!&ndash;    <li class="main-history__item-list__pages_page">5</li>&ndash;&gt;-->
+<!--    <li><button class="main-history__item-list__pages_button right-btn"><img src="../../../../../../assets/images/angle-right.svg" alt="angle-right"></button></li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+<mat-paginator [length]="10"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 20]"
+              aria-label="Select page">
+</mat-paginator>

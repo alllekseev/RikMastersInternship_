@@ -10,18 +10,19 @@ import { HeaderComponent } from './header.component';
 import {HeaderTopComponent} from "./header-top/header-top.component";
 
 @NgModule({
-    declarations: [
-        HeaderButtonComponent,
-        HeaderComponent,
-        HeaderTopComponent,
-    ],
+  declarations: [
+    HeaderButtonComponent,
+    HeaderComponent,
+    HeaderTopComponent,
+
+  ],
   exports: [
     HeaderComponent
   ],
     imports: [
       CommonModule,
       AppRoutingModule,
-      HeaderTopModuleModule
+      HeaderTopModuleModule,
     ]
 })
 export class HeaderModule { }

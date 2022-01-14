@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {InterceptorService} from "./components/loaderServer/interceptor.service";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
     declarations: [
@@ -41,7 +43,9 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
         ContentModule,
         BrowserAnimationsModule,
         MatProgressBarModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}

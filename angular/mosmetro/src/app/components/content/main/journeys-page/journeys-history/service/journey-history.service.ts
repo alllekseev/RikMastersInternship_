@@ -19,7 +19,7 @@ export class JourneyHistoryService {
   constructor(private httpClient: HttpClient) {}
 
   fetchHistory(): Observable<History[]> {
-    return this.httpClient.get<HistoryPage>(environment.urlAPI + methods.history)
+    return this.httpClient.get<HistoryPage>(environment.hostAPI + methods.history)
       .pipe(
         map(history =>  this.history = history.data)
       )

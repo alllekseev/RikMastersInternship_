@@ -1,3 +1,13 @@
+.material-icons {
+  font-size: 40px;
+}
+
+.mat-icon {
+  color: red;
+  width: 40px;
+  height: 40px;
+}
+
 .header-right__buttons {
   display: none;
 }
@@ -9,10 +19,6 @@
   background-image: url("../../../../../../assets/images/header-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-.header-right_burger:hover {
-  color: #0000ff;
-  background-image: url("../../../../../../assets/images/Group_26.svg");
 }
 
 @media screen and (min-width: 880px) {

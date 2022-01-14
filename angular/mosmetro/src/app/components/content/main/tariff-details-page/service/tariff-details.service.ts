@@ -19,7 +19,7 @@ export class TariffDetailsService {
 
   getTariffs(): Observable<Tariff[]> {
     // @ts-ignore
-    return this.httpClient.get<TariffPage>(environment.urlAPI + methods.tariffs)
+    return this.httpClient.get<TariffPage>(environment.hostAPI + methods.tariffs)
       .pipe(
         map(response => this.tariff = response.data),
       )

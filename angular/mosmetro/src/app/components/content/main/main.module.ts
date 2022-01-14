@@ -10,6 +10,8 @@ import {JourneysModule} from "./journeys-page/journeys.module";
 import {TariffDetailsService} from "./tariff-details-page/service/tariff-details.service";
 import {TariffsService} from "./tariffs-page/service/tariffs.service";
 import {RouterModule} from "@angular/router";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import {RouterModule} from "@angular/router";
     CommonModule,
     JourneysModule,
     RouterModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   exports: [
     JourneysComponent,

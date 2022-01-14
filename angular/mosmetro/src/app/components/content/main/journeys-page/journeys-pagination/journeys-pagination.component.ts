@@ -9,7 +9,6 @@ export class JourneysPaginationComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .loader-container {
   height: 100%;
   width: 100%;
@@ -8,10 +9,11 @@
   top: 50%;
   left: 50%;
 }
-.spinner circle {
-  width: 20px;
-  height: 20px;
-  color: accent;
+
+/* стилизация круга loader */
+.mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #D62828;
 }
 
 /*# sourceMappingURL=loader.component.css.map */

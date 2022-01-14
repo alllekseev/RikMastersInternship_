@@ -14,26 +14,24 @@
         <p class="ticket__purchase__details_text">Вы можете купить билет и реализовать ее на вашей карте «Тройка»</p>
         <div class="ticket__purchase__details__forms">
           <div class="ticket__purchase__details__forms_ticket-type">
-            <p class="ticket__purchase__details__forms_ticket-type_title">Тип билета</p>
-            <div class="ticket__purchase__details__forms_ticket-type_button">
-              <select class="ticket__purchase__details__forms_ticket-type_button_select">
-                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Не выбрано</option>
-                <option value="1" class="ticket__purchase__details__forms_ticket-type_button_choice">One</option>
-                <option value="2" class="ticket__purchase__details__forms_ticket-type_button_choice">Two</option>
-                <option value="3" class="ticket__purchase__details__forms_ticket-type_button_choice">Three</option>
-              </select>
-            </div>
+            <mat-form-field appearance="outline" color="warn" style="width: 100%; height: 40px; margin: 0">
+              <mat-label>Тип билета</mat-label>
+              <mat-select>
+                <mat-option value="ticket_one">Единый</mat-option>
+                <mat-option value="ticket_two">ТАТ</mat-option>
+                <mat-option value="ticket_three">90 минут</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="ticket__purchase__details__forms_ticket-type">
-            <p class="ticket__purchase__details__forms_ticket-type_title">Карта пополнения</p>
-            <div class="ticket__purchase__details__forms_ticket-type_button">
-              <select class="ticket__purchase__details__forms_ticket-type_button_select">
-                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Не выбрано</option>
-                <option class="ticket__purchase__details__forms_ticket-type_button_choice">One</option>
-                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Two</option>
-                <option class="ticket__purchase__details__forms_ticket-type_button_choice">Three</option>
-              </select>
-            </div>
+            <mat-form-field appearance="outline" color="warn" style="width: 100%; height: 20px; margin: 0">
+              <mat-label>Карта пополнения</mat-label>
+              <mat-select>
+                <mat-option value="ticket_one">Моя тройка</mat-option>
+                <mat-option value="ticket_two">Студенческая</mat-option>
+                <mat-option value="ticket_three">Карта москвича</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
         </div>
         <div class="ticket__purchase__details__footer">

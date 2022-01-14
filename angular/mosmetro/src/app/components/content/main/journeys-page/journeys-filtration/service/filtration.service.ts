@@ -16,7 +16,7 @@ export class FiltrationService {
   constructor(private httpClient: HttpClient) { }
 
   getCarriers(): Observable<Filter[]> {
-    return this.httpClient.get<FilterPage>(environment.urlAPI + methods.carriers)
+    return this.httpClient.get<FilterPage>(environment.hostAPI + methods.carriers)
       .pipe(
         map(response => this.filter = response.data)
       )

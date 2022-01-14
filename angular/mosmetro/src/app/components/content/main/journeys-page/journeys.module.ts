@@ -7,6 +7,13 @@ import {JourneysHistoryComponent} from "./journeys-history/journeys-history.comp
 import {LoaderComponent} from "../loader/loader.component";
 
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSelectModule} from "@angular/material/select";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -24,6 +31,13 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
   imports: [
     CommonModule,
     MatProgressSpinnerModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
 })
 

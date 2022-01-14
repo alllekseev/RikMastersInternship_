@@ -6,21 +6,27 @@ import {HeaderMiddleComponent} from "./header-middle/header-middle.component";
 import {HeaderRightComponent} from "./header-right/header-right.component";
 
 import {RouterModule} from "@angular/router";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     HeaderLeftComponent,
     HeaderMiddleComponent,
-    HeaderRightComponent
+    HeaderRightComponent,
   ],
   exports: [
     HeaderLeftComponent,
     HeaderRightComponent,
-    HeaderMiddleComponent
+    HeaderMiddleComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class HeaderTopModuleModule { }

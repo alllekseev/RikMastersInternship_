@@ -9,11 +9,20 @@
       </button>
     </div>
     <div class="filter__date__calendar" *ngIf="date">
-      <p class="filter__date__calendar_name">Дата проезда</p>
-      <button class="filter__date__calendar__button">
-        <p class="filter__date__calendar__button_p">__.__.____</p>
-        <img src="../../../../../../assets/images/calendar.svg" alt="calendar">
-      </button>
+      <mat-form-field appearance="legacy" class="example-form-field" color="warn">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="rangePicker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+        <mat-date-range-picker #rangePicker>
+          <mat-date-range-picker-actions>
+            <button mat-button matDateRangePickerCancel>Cancel</button>
+            <button mat-raised-button color="warn" matDateRangePickerApply>Apply</button>
+          </mat-date-range-picker-actions>
+        </mat-date-range-picker>
+      </mat-form-field>
     </div>
   </div>
   <div class="filter__owner">

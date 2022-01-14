@@ -1,8 +1,26 @@
 <h2 class="main-history_title">История проездов</h2>
-<button class="main-history__filter-button">
-  <p class="main-history__filter-button_p">Фильтр</p>
-  <i class="fas fa-angle-down angle"></i> <!-- С помощью JS будет меняться иконка -->
-</button>
+<button mat-button [matMenuTriggerFor]="filtrationMenu"  class="main-history__filter-button">Фильтрация</button>
+<mat-menu #filtrationMenu="matMenu" yPosition="below">
+  <mat-form-field appearance="fill" color="warn" style="width: 100%; background-color: #FFFFFF">
+    <mat-label style="background: none">Choose a date</mat-label>
+    <input matInput [matDatepicker]="datepicker" style="background: none">
+    <mat-datepicker-toggle matSuffix [for]="datepicker" style="background: none"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker>
+      <mat-datepicker-actions>
+        <button mat-button matDatepickerCancel>Cancel</button>
+        <button mat-raised-button color="warn" matDatepickerApply>Apply</button>
+      </mat-datepicker-actions>
+    </mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="legacy" color="warn" style="width: 100%; padding: 0 12px">
+      <mat-label>Выберите карту</mat-label>
+      <mat-select>
+        <mat-option value="option1">Единый</mat-option>
+        <mat-option value="option2">ТАТ</mat-option>
+        <mat-option value="option3">Карта москвича</mat-option>
+      </mat-select>
+  </mat-form-field>
+</mat-menu>
 <app-loader></app-loader>
 <div class="main-history__days" id="history__days">
   <div class="main-history__days__day" id="history__day">
@@ -14,7 +32,7 @@
             <span class="main-history__cart_title">{{ history.place_name }}</span>
             <span class="main-history__cart_price">{{ history.price }}&#8381;</span>
           </div>
-          <p class="main-history__cart_date">{{ history.created_at }}</p>
+          <p class="main-history__cart_date">{{ history.created_at | date: 'EEEE, MMMM d, y, h:mm:ss a'}}</p>
           <p class="main-history__cart_cart-name" >{{history.id}}</p>
           <p class="main-history__cart_cart-number">{{history.id}}</p>
         </div>
@@ -22,15 +40,3 @@
     </div>
   </div>
 </div>
-
-<!--<div class="main-history__cart" *ngFor="let history of history;">-->
-<!--  <div class="main-history__cart_station">-->
-<!--    <span class="main-history__cart_title">{{ history.place_name }}</span>-->
-<!--    <span class="main-history__cart_price">{{ history.price }}&#8381;</span>-->
-<!--  </div>-->
-<!--  <p class="main-history__cart_date">{{ history.created_at }}</p>-->
-<!--  <span *ngFor="let carrier of history.carrier">-->
-<!--          <p class="main-history__cart_cart-name" >{{carrier.name}}</p>-->
-<!--          <p class="main-history__cart_cart-number">{{carrier.number}}</p>-->
-<!--        </span>-->
-<!--</div>-->
